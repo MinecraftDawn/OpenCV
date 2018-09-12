@@ -19,6 +19,8 @@ opencv2/highgui/highgui.hpp
 -
 iostream
 -
+stdint.h
+-
 
 C:/opencv/build/include/opencv2/calib3d.hpp
 opencv2/core.hpp
