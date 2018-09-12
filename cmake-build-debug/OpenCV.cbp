@@ -89,6 +89,9 @@
 		<Unit filename="C:/Users/Eric/CLionProjects/OpenCV/main.cpp">
 			<Option target="OpenCV"/>
 		</Unit>
+		<Unit filename="C:/Users/Eric/CLionProjects/OpenCV/practice/ShowImage.h">
+			<Option target="OpenCV"/>
+		</Unit>
 		<Unit filename="C:/Users/Eric/CLionProjects/OpenCV/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

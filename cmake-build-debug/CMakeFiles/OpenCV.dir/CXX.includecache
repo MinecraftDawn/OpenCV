@@ -7,6 +7,12 @@
 #IncludeRegexTransform: 
 
 C:/Users/Eric/CLionProjects/OpenCV/main.cpp
+iostream
+-
+practice/ShowImage.h
+C:/Users/Eric/CLionProjects/OpenCV/practice/ShowImage.h
+
+C:/Users/Eric/CLionProjects/OpenCV/practice/ShowImage.h
 opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp

@@ -3,5 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/CMakeLists.txt" charset="x-windows-950" />
     <file url="file://$PROJECT_DIR$/main.cpp" charset="x-windows-950" />
+    <file url="file://$PROJECT_DIR$/practice/ShowImage.cpp" charset="x-windows-950" />
+    <file url="file://$PROJECT_DIR$/practice/ShowImage.h" charset="x-windows-950" />
   </component>
 </project>
