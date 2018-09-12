@@ -52,7 +52,7 @@ public:
         waitKey(0);
     }
 
-    void showImg3(){
+    void showImg3(){ //¦Ç¶¥
         char ig[] = "B:\\¦å¤pªO.jpg";
 
         Mat testColor = imread(ig,CV_LOAD_IMAGE_GRAYSCALE);
@@ -62,6 +62,24 @@ public:
         imshow("Display window",testColor);
 
         imwrite("B:\\¦å¤pªO¦Ç.jpg",testColor);
+
+        waitKey(0);
+    }
+
+    void showImg4(){
+        char ig[] = "B:\\¦å¤pªO.jpg";
+
+        Mat file = imread(ig,CV_LOAD_IMAGE_GRAYSCALE);
+
+        namedWindow("window1", CV_WINDOW_NORMAL);
+        namedWindow("window2", CV_WINDOW_AUTOSIZE);
+
+        imshow("window1",file);
+        imshow("window2",file);
+
+        resizeWindow("window1",file.cols/2,file.rows/2);
+
+        moveWindow("window1",-500,-500);
 
         waitKey(0);
     }
