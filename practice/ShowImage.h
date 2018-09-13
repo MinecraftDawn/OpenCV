@@ -84,7 +84,22 @@ public:
         waitKey(0);
     }
 
-    void showImg5() {//RGB
+    void showImg5(){ //¦Û­q¦Ç¶¥
+        char ig[] = "B:\\¦å¤pªO.jpg";
+
+        Mat file = imread(ig, CV_LOAD_IMAGE_GRAYSCALE);
+
+        for (int i = 0; i < file.rows; ++i) {
+            for (int j = 0; j < file.cols; ++j) {
+                file.at<uint8_t >(i,j) = file.at<uint8_t >(i,j) *0.8;
+            }
+        }
+
+        imshow("Display", file);
+        waitKey(0);
+    }
+
+    void showImg6() {//RGB
         char ig[] = "B:\\¦å¤pªO.jpg";
 
         Mat file = imread(ig, CV_LOAD_IMAGE_COLOR);
@@ -102,7 +117,32 @@ public:
         imshow("D2", file2);
         waitKey(0);
 
+    }
 
+    void showImg7(){
+        char ig[] = "B:\\¦å¤pªO.jpg";
+
+        Mat file = imread(ig, CV_LOAD_IMAGE_COLOR);
+
+        Mat splitC[3];
+
+        split(file,splitC);
+
+        imshow("B",splitC[0]);
+        imshow("G",splitC[1]);
+        imshow("R",splitC[2]);
+
+        splitC[0] = Mat::zeros(splitC[0].size(),CV_8UC1);
+//        splitC[1] = Mat::zeros(splitC[1].size(),CV_8UC1);
+        splitC[2] = Mat::zeros(splitC[2].size(),CV_8UC1);
+
+        Mat output;
+
+        merge(splitC,3,output);
+
+        imshow("Merged",output);
+
+        waitKey(0);
     }
 
 };
