@@ -156,7 +156,7 @@ public:
 
         Mat dftOriginal;
 
-        Mat originalComplex[2] = {originalFloat,Mat::zeros(originalComplex->size(),CV_32F)};
+        Mat originalComplex[2] = {originalFloat,Mat::zeros(originalFloat.size(),CV_32F)};
 
         Mat dftReady;
 
