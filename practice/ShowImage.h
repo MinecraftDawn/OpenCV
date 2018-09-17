@@ -119,7 +119,7 @@ public:
 
     }
 
-    void showImg7() {
+    void showImg7() { //merge
         char ig[] = "B:\\¦å¤pªO.jpg";
 
         Mat file = imread(ig, CV_LOAD_IMAGE_COLOR);
@@ -133,7 +133,7 @@ public:
         imshow("R", splitC[2]);
 
         splitC[0] = Mat::zeros(splitC[0].size(), CV_8UC1);
-//        splitC[1] = Mat::zeros(splitC[1].size(),CV_8UC1);
+        splitC[1] = Mat::zeros(splitC[1].size(),CV_8UC1);
         splitC[2] = Mat::zeros(splitC[2].size(), CV_8UC1);
 
         Mat output;
@@ -154,7 +154,7 @@ public:
 
         file.convertTo(originalFloat, CV_32FC1, 1.0 / 255.0);
 
-        Mat dftOriginal;
+        Mat dftOfOriginal;
 
         Mat originalComplex[2] = {originalFloat,Mat::zeros(originalFloat.size(),CV_32F)};
 
@@ -162,11 +162,11 @@ public:
 
         merge(originalComplex,2,dftReady);
 
-        dft(dftReady,dftOriginal,DFT_COMPLEX_OUTPUT);
+        dft(dftReady,dftOfOriginal,DFT_COMPLEX_OUTPUT);
 
-        Mat splitArray[2] = {Mat::zeros(dftOriginal.size(),CV_32F),Mat::zeros(dftOriginal.size(),CV_32F)};
+        Mat splitArray[2] = {Mat::zeros(dftOfOriginal.size(),CV_32F),Mat::zeros(dftOfOriginal.size(),CV_32F)};
 
-        split(dftOriginal,splitArray);
+        split(dftOfOriginal,splitArray);
 
         Mat dftMagnitude;
 
@@ -181,8 +181,6 @@ public:
         imshow("DFT",dftMagnitude);
 
         waitKey(0);
-
-
 
     }
 
