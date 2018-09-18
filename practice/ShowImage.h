@@ -109,7 +109,7 @@ public:
             for (int j = 0; j < file.cols; ++j) {
                 file.at<Vec3b>(i, j)[0] = file.at<Vec3b>(i, j)[0] * 1;//B
                 file.at<Vec3b>(i, j)[1] = file.at<Vec3b>(i, j)[1] * 1;//G
-                file.at<Vec3b>(i, j)[2] = file.at<Vec3b>(i, j)[2] * 1;//R
+                file.at<Vec3b>(i, j)[2] = file.at<Vec3b>(i, j)[2] * 0;//R
             }
         }
 
@@ -133,7 +133,7 @@ public:
         imshow("R", splitC[2]);
 
         splitC[0] = Mat::zeros(splitC[0].size(), CV_8UC1);
-        splitC[1] = Mat::zeros(splitC[1].size(),CV_8UC1);
+        splitC[1] = Mat::zeros(splitC[1].size(), CV_8UC1);
         splitC[2] = Mat::zeros(splitC[2].size(), CV_8UC1);
 
         Mat output;
@@ -156,32 +156,104 @@ public:
 
         Mat dftOfOriginal;
 
-        Mat originalComplex[2] = {originalFloat,Mat::zeros(originalFloat.size(),CV_32F)};
+        Mat originalComplex[2] = {originalFloat, Mat::zeros(originalFloat.size(), CV_32F)};
 
         Mat dftReady;
 
-        merge(originalComplex,2,dftReady);
+        merge(originalComplex, 2, dftReady);
 
-        dft(dftReady,dftOfOriginal,DFT_COMPLEX_OUTPUT);
+        dft(dftReady, dftOfOriginal, DFT_COMPLEX_OUTPUT);
 
-        Mat splitArray[2] = {Mat::zeros(dftOfOriginal.size(),CV_32F),Mat::zeros(dftOfOriginal.size(),CV_32F)};
+        Mat splitArray[2] = {Mat::zeros(dftOfOriginal.size(), CV_32F), Mat::zeros(dftOfOriginal.size(), CV_32F)};
 
-        split(dftOfOriginal,splitArray);
+        split(dftOfOriginal, splitArray);
 
         Mat dftMagnitude;
 
-        magnitude(splitArray[0],splitArray[1],dftMagnitude);
+        magnitude(splitArray[0], splitArray[1], dftMagnitude);
 
         dftMagnitude += Scalar::all(1);
 
-        log(dftMagnitude,dftMagnitude);
+        log(dftMagnitude, dftMagnitude);
 
-        normalize(dftMagnitude,dftMagnitude,0,1,CV_MINMAX);
+        normalize(dftMagnitude, dftMagnitude, 0, 1, CV_MINMAX);
 
-        imshow("DFT",dftMagnitude);
+        imshow("DFT", dftMagnitude);
 
         waitKey(0);
 
+    }
+
+    void showImg9() {
+        char img[] = "B:\\血小板.jpg";
+
+        Mat image;
+
+        // 載入圖檔
+        image = imread(img, CV_LOAD_IMAGE_COLOR);
+
+        // 檢查讀檔是否成功
+        if (!image.data) {
+            cout << "無法開啟或找不到圖檔" << std::endl;
+            return;
+        }
+
+        // 建立顯示圖檔視窗
+        namedWindow("原圖", CV_WINDOW_NORMAL);
+        namedWindow("下雪圖", CV_WINDOW_NORMAL);
+
+        imshow("原圖", image);
+
+        // 雪點數
+        int i = 600;
+        int color = 255;
+
+        for (int k = 0; k < i; k++) {
+
+            if (k == 300) {
+                color = 0;
+            }
+
+            int i = rand() % image.cols;
+            int j = rand() % image.rows;
+
+            if (image.channels() == 1) { // gray-level image
+                image.at<uchar>(j, i) = color;
+                if (i < (int) image.cols)
+                    image.at<uchar>(j + 1, i) = color;
+                if (j < (int) image.rows)
+                    image.at<uchar>(j, i + 1) = color;
+                if (i < (int) image.cols && j < (int) image.rows)
+                    image.at<uchar>(j + 1, i + 1) = color;
+
+            } else if (image.channels() == 3) { // color image
+                image.at<cv::Vec3b>(j, i)[0] = color;
+                image.at<cv::Vec3b>(j, i)[1] = color;
+                image.at<cv::Vec3b>(j, i)[2] = color;
+
+                if (i < (int) image.cols - 1) {
+                    image.at<cv::Vec3b>(j, i + 1)[0] = color;
+                    image.at<cv::Vec3b>(j, i + 1)[1] = color;
+                    image.at<cv::Vec3b>(j, i + 1)[2] = color;
+                }
+
+                if (j < (int) image.rows - 1) {
+                    image.at<cv::Vec3b>(j + 1, i)[0] = color;
+                    image.at<cv::Vec3b>(j + 1, i)[1] = color;
+                    image.at<cv::Vec3b>(j + 1, i)[2] = color;
+                }
+
+                if (j < (int) image.rows - 1 && i < (int) image.cols - 1) {
+                    image.at<cv::Vec3b>(j + 1, i + 1)[0] = color;
+                    image.at<cv::Vec3b>(j + 1, i + 1)[1] = color;
+                    image.at<cv::Vec3b>(j + 1, i + 1)[2] = color;
+                }
+            }
+        }
+
+        imshow("下雪圖", image);
+
+        waitKey(0);
     }
 
 };
