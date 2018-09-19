@@ -152,7 +152,7 @@ public:
 
         Mat originalFloat;
 
-        file.convertTo(originalFloat, CV_32FC1, 1.0 / 255.0);
+        file.convertTo(originalFloat, CV_32FC2, 1.0 / 255.0);
 
         Mat dftOfOriginal;
 
@@ -256,7 +256,43 @@ public:
         waitKey(0);
     }
 
-};
+    void showImg_1() {
+        double alpha = 0, beta, input;
 
+        Mat img1;
+        Mat img2;
+        Mat merge;
+
+        /// Ask the user enter alpha
+
+        cout << "請輸入0~1的數值";
+        cin >> input;
+
+        // 確認 alpha 值數入的正確在於 0 與 1 之間
+        if (alpha >= 0 && alpha <= 1) {
+            alpha = input;
+        }
+
+        /// 讀取兩個大小與類型相同的圖檔
+        img1 = imread("B:\\bg.jpg");
+        img2 = imread("B:\\b.jpg");
+
+        if (!img1.data || !img2.data) {
+            cout << "讀不到檔案唷" << endl;
+            return;
+        }
+
+        namedWindow("合成", CV_LOAD_IMAGE_COLOR);
+
+        beta = (1.0 - alpha);
+        addWeighted(img1, alpha, img2, beta, 0.0, merge);
+
+        imshow("合成", merge);
+
+        waitKey(0);
+        return;
+
+    }
+};
 
 #endif //OPENCV_SHOWIMAGE_H
