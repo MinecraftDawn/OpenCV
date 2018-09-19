@@ -263,17 +263,13 @@ public:
         Mat img2;
         Mat merge;
 
-        /// Ask the user enter alpha
-
         cout << "請輸入0~1的數值";
         cin >> input;
 
-        // 確認 alpha 值數入的正確在於 0 與 1 之間
         if (alpha >= 0 && alpha <= 1) {
             alpha = input;
         }
 
-        /// 讀取兩個大小與類型相同的圖檔
         img1 = imread("B:\\bg.jpg");
         img2 = imread("B:\\b.jpg");
 
