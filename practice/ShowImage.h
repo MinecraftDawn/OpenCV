@@ -7,6 +7,7 @@
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
+#include "opencv2/imgproc/imgproc.hpp"
 #include <iostream>
 #include <stdint.h>
 
@@ -287,6 +288,29 @@ public:
 
         waitKey(0);
         return;
+
+    }
+
+    void showImg_2() {
+        Mat image = imread("B:\\¦å¤pªO.jpg", CV_LOAD_IMAGE_COLOR);
+        Mat heart = imread("B:\\heart.png", CV_LOAD_IMAGE_COLOR);
+
+        Mat mergeImg = image, opencvlogo;
+
+        resize(heart, opencvlogo, Size(100, 100));
+
+        namedWindow("Image 1", CV_WINDOW_AUTOSIZE);
+
+        Mat imageROI;
+
+        imageROI = image(Rect(630, 500, 100, 100));
+
+        addWeighted(imageROI, 1.0, opencvlogo, 0.3, 0.3, imageROI);
+
+        namedWindow("with logo");
+        imshow("with logo", image);
+
+        waitKey();
 
     }
 };

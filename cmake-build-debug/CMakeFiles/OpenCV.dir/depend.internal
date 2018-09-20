@@ -83,6 +83,7 @@ CMakeFiles/OpenCV.dir/main.cpp.obj
  C:/opencv/build/include/opencv2/imgcodecs.hpp
  C:/opencv/build/include/opencv2/imgcodecs/imgcodecs_c.h
  C:/opencv/build/include/opencv2/imgproc.hpp
+ C:/opencv/build/include/opencv2/imgproc/imgproc.hpp
  C:/opencv/build/include/opencv2/imgproc/imgproc_c.h
  C:/opencv/build/include/opencv2/imgproc/types_c.h
  C:/opencv/build/include/opencv2/ml.hpp

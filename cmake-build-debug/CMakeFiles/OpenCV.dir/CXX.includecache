@@ -17,6 +17,8 @@ opencv2/core/core.hpp
 -
 opencv2/highgui/highgui.hpp
 -
+opencv2/imgproc/imgproc.hpp
+C:/Users/Eric/CLionProjects/OpenCV/practice/opencv2/imgproc/imgproc.hpp
 iostream
 -
 stdint.h
@@ -877,6 +879,10 @@ opencv2/core.hpp
 C:/opencv/build/include/opencv2/opencv2/core.hpp
 opencv2/imgproc/imgproc_c.h
 C:/opencv/build/include/opencv2/opencv2/imgproc/imgproc_c.h
+
+C:/opencv/build/include/opencv2/imgproc/imgproc.hpp
+opencv2/imgproc.hpp
+C:/opencv/build/include/opencv2/imgproc/opencv2/imgproc.hpp
 
 C:/opencv/build/include/opencv2/imgproc/imgproc_c.h
 opencv2/imgproc/types_c.h
