@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/practice/ShowImage.h" line="266" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/practice/ShowImage.h" line="332" mnemonic="2" />
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
@@ -16,9 +16,6 @@
   <component name="ChangeListManager">
     <list default="true" id="696f3d8e-a7be-4a90-9077-a4a9d5cae36e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/vc140.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" afterDir="false" />
@@ -44,8 +41,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="224">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -53,20 +50,10 @@
       <file leaf-file-name="ShowImage.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1198">
-              <caret line="305" column="34" selection-start-line="305" selection-start-column="34" selection-end-line="305" selection-end-column="34" />
+            <state relative-caret-position="789">
+              <caret line="316" column="24" selection-start-line="316" selection-start-column="24" selection-end-line="316" selection-end-column="24" />
               <folding>
                 <element signature="e#95#127#0" expanded="true" />
-                <element signature="e#282#810#0" />
-                <element signature="e#816#993#0" />
-                <element signature="e#999#1294#0" />
-                <element signature="e#1300#1720#0" />
-                <element signature="e#1726#2094#0" />
-                <element signature="e#2100#2696#0" />
-                <element signature="e#2702#3262#0" />
-                <element signature="e#3268#4176#0" />
-                <element signature="e#4182#6378#0" />
-                <element signature="e#6384#7022#0" />
               </folding>
             </state>
           </provider>
@@ -128,25 +115,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="OpenCV" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OpenCV" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpenCV" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OpenCV" type="462c0819:PsiDirectoryNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -199,7 +168,8 @@
       <workItem from="1537247414712" duration="477000" />
       <workItem from="1537247917873" duration="3948000" />
       <workItem from="1537361451808" duration="3674000" />
-      <workItem from="1537444127254" duration="2624000" />
+      <workItem from="1537444127254" duration="4439000" />
+      <workItem from="1537508118590" duration="1861000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1536679366015</created>
@@ -285,11 +255,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537364523217</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="mergeLogo">
+      <created>1537449363214</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1537449363215</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45750000" />
+    <option name="totallyTimeSpent" value="49426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1088" y="-508" width="1096" height="1896" extended-state="6" />
@@ -333,7 +310,8 @@
     <MESSAGE value="comment" />
     <MESSAGE value="雜訊" />
     <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="mergeLogo" />
+    <option name="LAST_COMMIT_MESSAGE" value="mergeLogo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -341,6 +319,30 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8288">
+          <caret line="296" lean-forward="true" selection-start-line="296" selection-end-line="296" />
+          <folding>
+            <element signature="e#95#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -361,16 +363,6 @@
           <caret line="263" column="18" selection-start-line="263" selection-start-column="18" selection-end-line="263" selection-end-column="18" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
-            <element signature="e#282#810#0" />
-            <element signature="e#816#993#0" />
-            <element signature="e#999#1294#0" />
-            <element signature="e#1300#1720#0" />
-            <element signature="e#1726#2094#0" />
-            <element signature="e#2100#2696#0" />
-            <element signature="e#2702#3262#0" />
-            <element signature="e#3268#4176#0" />
-            <element signature="e#4182#6378#0" />
-            <element signature="e#6384#7022#0" />
           </folding>
         </state>
       </provider>
@@ -395,16 +387,6 @@
           <caret line="79" column="62" lean-forward="true" selection-start-line="79" selection-start-column="62" selection-end-line="79" selection-end-column="62" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
-            <element signature="e#282#810#0" />
-            <element signature="e#816#993#0" />
-            <element signature="e#999#1294#0" />
-            <element signature="e#1300#1720#0" />
-            <element signature="e#1726#2094#0" />
-            <element signature="e#2100#2696#0" />
-            <element signature="e#2702#3262#0" />
-            <element signature="e#3268#4176#0" />
-            <element signature="e#4182#6378#0" />
-            <element signature="e#6384#7022#0" />
           </folding>
         </state>
       </provider>
@@ -429,16 +411,6 @@
           <caret line="83" column="19" lean-forward="true" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
-            <element signature="e#282#810#0" />
-            <element signature="e#816#993#0" />
-            <element signature="e#999#1294#0" />
-            <element signature="e#1300#1720#0" />
-            <element signature="e#1726#2094#0" />
-            <element signature="e#2100#2696#0" />
-            <element signature="e#2702#3262#0" />
-            <element signature="e#3268#4176#0" />
-            <element signature="e#4182#6378#0" />
-            <element signature="e#6384#7022#0" />
           </folding>
         </state>
       </provider>
@@ -463,16 +435,6 @@
           <caret line="112" column="13" lean-forward="true" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
-            <element signature="e#282#810#0" />
-            <element signature="e#816#993#0" />
-            <element signature="e#999#1294#0" />
-            <element signature="e#1300#1720#0" />
-            <element signature="e#1726#2094#0" />
-            <element signature="e#2100#2696#0" />
-            <element signature="e#2702#3262#0" />
-            <element signature="e#3268#4176#0" />
-            <element signature="e#4182#6378#0" />
-            <element signature="e#6384#7022#0" />
           </folding>
         </state>
       </provider>
@@ -497,16 +459,6 @@
           <caret line="166" column="81" selection-start-line="166" selection-start-column="81" selection-end-line="166" selection-end-column="81" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
-            <element signature="e#282#810#0" />
-            <element signature="e#816#993#0" />
-            <element signature="e#999#1294#0" />
-            <element signature="e#1300#1720#0" />
-            <element signature="e#1726#2094#0" />
-            <element signature="e#2100#2696#0" />
-            <element signature="e#2702#3262#0" />
-            <element signature="e#3268#4176#0" />
-            <element signature="e#4182#6378#0" />
-            <element signature="e#6384#7022#0" />
           </folding>
         </state>
       </provider>
@@ -524,16 +476,6 @@
           <caret line="160" column="21" lean-forward="true" selection-start-line="160" selection-start-column="21" selection-end-line="160" selection-end-column="21" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
-            <element signature="e#282#810#0" />
-            <element signature="e#816#993#0" />
-            <element signature="e#999#1294#0" />
-            <element signature="e#1300#1720#0" />
-            <element signature="e#1726#2094#0" />
-            <element signature="e#2100#2696#0" />
-            <element signature="e#2702#3262#0" />
-            <element signature="e#3268#4176#0" />
-            <element signature="e#4182#6378#0" />
-            <element signature="e#6384#7022#0" />
           </folding>
         </state>
       </provider>
@@ -565,16 +507,6 @@
           <caret line="102" column="34" lean-forward="true" selection-start-line="102" selection-start-column="34" selection-end-line="102" selection-end-column="34" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
-            <element signature="e#282#810#0" />
-            <element signature="e#816#993#0" />
-            <element signature="e#999#1294#0" />
-            <element signature="e#1300#1720#0" />
-            <element signature="e#1726#2094#0" />
-            <element signature="e#2100#2696#0" />
-            <element signature="e#2702#3262#0" />
-            <element signature="e#3268#4176#0" />
-            <element signature="e#4182#6378#0" />
-            <element signature="e#6384#7022#0" />
           </folding>
         </state>
       </provider>
@@ -599,16 +531,6 @@
           <caret line="96" column="69" selection-start-line="96" selection-start-column="69" selection-end-line="96" selection-end-column="69" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
-            <element signature="e#282#810#0" />
-            <element signature="e#816#993#0" />
-            <element signature="e#999#1294#0" />
-            <element signature="e#1300#1720#0" />
-            <element signature="e#1726#2094#0" />
-            <element signature="e#2100#2696#0" />
-            <element signature="e#2702#3262#0" />
-            <element signature="e#3268#4176#0" />
-            <element signature="e#4182#6378#0" />
-            <element signature="e#6384#7022#0" />
           </folding>
         </state>
       </provider>
@@ -732,27 +654,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state relative-caret-position="224">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1198">
-          <caret line="305" column="34" selection-start-line="305" selection-start-column="34" selection-end-line="305" selection-end-column="34" />
+        <state relative-caret-position="789">
+          <caret line="316" column="24" selection-start-line="316" selection-start-column="24" selection-end-line="316" selection-end-column="24" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
-            <element signature="e#282#810#0" />
-            <element signature="e#816#993#0" />
-            <element signature="e#999#1294#0" />
-            <element signature="e#1300#1720#0" />
-            <element signature="e#1726#2094#0" />
-            <element signature="e#2100#2696#0" />
-            <element signature="e#2702#3262#0" />
-            <element signature="e#3268#4176#0" />
-            <element signature="e#4182#6378#0" />
-            <element signature="e#6384#7022#0" />
           </folding>
         </state>
       </provider>

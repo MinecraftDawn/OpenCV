@@ -292,26 +292,49 @@ public:
     }
 
     void showImg_2() {
-        Mat image = imread("B:\\血小板.jpg", CV_LOAD_IMAGE_COLOR);
+        Mat image = imread("B:\\血小板2.jpg", CV_LOAD_IMAGE_COLOR);
         Mat heart = imread("B:\\heart.png", CV_LOAD_IMAGE_COLOR);
 
-        Mat mergeImg = image, opencvlogo;
+        Mat mergeImg = image, reHeart;
 
-        resize(heart, opencvlogo, Size(100, 100));
+        resize(heart, reHeart, Size(80, 80));
 
-        namedWindow("Image 1", CV_WINDOW_AUTOSIZE);
+        Mat withHeart;
 
-        Mat imageROI;
+        withHeart = image(Rect(260, 600, 80, 80));
 
-        imageROI = image(Rect(630, 500, 100, 100));
+        addWeighted(withHeart, 0.2, reHeart, 1.0, 0.0, withHeart);
 
-        addWeighted(imageROI, 1.0, opencvlogo, 0.3, 0.3, imageROI);
-
-        namedWindow("with logo");
-        imshow("with logo", image);
+        namedWindow("withHeart");
+        imshow("withHeart", image);
 
         waitKey();
 
+    }
+
+    void showImg_3() {
+
+        double alpha = 1;
+        int beta = 50;
+
+        Mat image = imread("B:\\血小板.jpg", CV_LOAD_IMAGE_COLOR);
+
+        Mat new_image = Mat::zeros(image.size(), image.type());
+
+        for (int i = 0; i < image.rows; i++) {
+            for (int j = 0; j < image.cols; j++) {
+                for (int c = 0; c < 3; c++) {
+
+                    new_image.at<Vec3b>(i, j)[c] = saturate_cast<uchar>(alpha * (image.at<Vec3b>(i, j)[c]) + beta);
+                }
+            }
+        }
+
+        namedWindow("亮度", 1);
+
+        imshow("亮度", new_image);
+
+        waitKey();
     }
 };
 
