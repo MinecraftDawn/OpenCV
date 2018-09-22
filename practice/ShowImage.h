@@ -312,7 +312,7 @@ public:
 
     }
 
-    void showImg_3() {
+    void showImg_3() { //線性改變亮度
 
         double alpha = 1;
         int beta = 50;
