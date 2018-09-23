@@ -291,7 +291,7 @@ public:
 
     }
 
-    void showImg_2() {
+    void showImg_2() { //Logo
         Mat image = imread("B:\\¦å¤pªO2.jpg", CV_LOAD_IMAGE_COLOR);
         Mat heart = imread("B:\\heart.png", CV_LOAD_IMAGE_COLOR);
 
