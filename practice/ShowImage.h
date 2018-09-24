@@ -336,6 +336,38 @@ public:
 
         waitKey();
     }
+
+    void showImg_4() {
+        Mat atom_image = Mat::zeros(400, 400, CV_8UC3);
+
+//        MyEllipse(atom_image, 0);
+//        MyEllipse(atom_image, 45);
+//        MyEllipse(atom_image, -45);
+
+        for (int i = 0; i < 36; ++i) {
+            MyEllipse(atom_image, 0+i*10);
+        }
+
+        namedWindow("test");
+        imshow("test", atom_image);
+
+        waitKey(0);
+
+    }
+
+private:
+    void MyEllipse(Mat img, double theta) {
+        int thickness = 2;
+
+        int col = img.cols;
+        int row = img.rows;
+
+        Point p = Point(col/2,row/2);
+        Size s = Size(img.cols/4,img.rows/8);
+        Scalar color = Scalar(255, 255, 255);
+
+        ellipse(img,p,s,theta,0,360,color,thickness);
+    }
 };
 
 #endif //OPENCV_SHOWIMAGE_H
