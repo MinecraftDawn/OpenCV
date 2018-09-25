@@ -3,6 +3,7 @@
 
 CMakeFiles\OpenCV.dir\main.cpp.obj: ..\main.cpp
 CMakeFiles\OpenCV.dir\main.cpp.obj: ..\practice\ShowImage.h
+CMakeFiles\OpenCV.dir\main.cpp.obj: C:\opencv\build\include\opencv\cv.h
 CMakeFiles\OpenCV.dir\main.cpp.obj: C:\opencv\build\include\opencv2\calib3d.hpp
 CMakeFiles\OpenCV.dir\main.cpp.obj: C:\opencv\build\include\opencv2\calib3d\calib3d_c.h
 CMakeFiles\OpenCV.dir\main.cpp.obj: C:\opencv\build\include\opencv2\core.hpp

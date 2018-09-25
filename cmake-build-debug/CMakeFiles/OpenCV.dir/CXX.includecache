@@ -19,10 +19,24 @@ opencv2/highgui/highgui.hpp
 -
 opencv2/imgproc/imgproc.hpp
 C:/Users/Eric/CLionProjects/OpenCV/practice/opencv2/imgproc/imgproc.hpp
+opencv/cv.h
+-
 iostream
 -
 stdint.h
 -
+
+C:/opencv/build/include/opencv/cv.h
+opencv2/core/core_c.h
+C:/opencv/build/include/opencv/opencv2/core/core_c.h
+opencv2/imgproc/imgproc_c.h
+C:/opencv/build/include/opencv/opencv2/imgproc/imgproc_c.h
+opencv2/photo/photo_c.h
+C:/opencv/build/include/opencv/opencv2/photo/photo_c.h
+opencv2/video/tracking_c.h
+C:/opencv/build/include/opencv/opencv2/video/tracking_c.h
+opencv2/objdetect/objdetect_c.h
+C:/opencv/build/include/opencv/opencv2/objdetect/objdetect_c.h
 
 C:/opencv/build/include/opencv2/calib3d.hpp
 opencv2/core.hpp

@@ -8,6 +8,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include "opencv2/imgproc/imgproc.hpp"
+#include <opencv\cv.h>
 #include <iostream>
 #include <stdint.h>
 
@@ -355,9 +356,28 @@ public:
 
     }
 
+    void showImg_5(){
+        Mat image = imread("B:\\血小板.jpg", 1);
+
+        Mat gray_image;
+
+        cvtColor(image, gray_image, CV_BGR2GRAY);
+
+        // 儲存轉換後的圖檔
+        imwrite("B:\\灰階血小板.jpg", gray_image);
+
+        // 顯示圖檔視窗大小的控制
+        namedWindow("灰階", CV_WINDOW_AUTOSIZE);
+
+        // 顯示灰階圖檔
+        imshow("灰階", gray_image);
+
+        waitKey(0);
+    }
+
 private:
     void MyEllipse(Mat img, double theta) {
-        int thickness = 2;
+        int thickness = 0;
 
         int col = img.cols;
         int row = img.rows;
