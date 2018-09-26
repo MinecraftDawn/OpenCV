@@ -345,9 +345,11 @@ public:
 //        MyEllipse(atom_image, 45);
 //        MyEllipse(atom_image, -45);
 
-        for (int i = 0; i < 36; ++i) {
-            MyEllipse(atom_image, 0+i*10);
-        }
+        Circle(atom_image);
+
+//        for (int i = 0; i < 36; ++i) {
+//            Ellipse(atom_image, 0 + i * 10);
+//        }
 
         namedWindow("test");
         imshow("test", atom_image);
@@ -356,7 +358,7 @@ public:
 
     }
 
-    void showImg_5(){
+    void showImg_5() {
         Mat image = imread("B:\\¦å¤pªO.jpg", 1);
 
         Mat gray_image;
@@ -376,17 +378,30 @@ public:
     }
 
 private:
-    void MyEllipse(Mat img, double theta) {
+    void Ellipse(Mat img, double theta) {
         int thickness = 0;
 
         int col = img.cols;
         int row = img.rows;
 
-        Point p = Point(col/2,row/2);
-        Size s = Size(img.cols/4,img.rows/8);
+        Point p = Point(col / 2, row / 2);
+        Size s = Size(img.cols / 4, img.rows / 8);
         Scalar color = Scalar(255, 255, 255);
 
-        ellipse(img,p,s,theta,0,360,color,thickness);
+        ellipse(img, p, s, theta, 0, 360, color, thickness);
+    }
+
+    void Circle(Mat img) {
+        int thickness = 1;
+        int lineType = 1;
+
+        Point p = Point(img.cols / 2, img.rows / 2);
+
+        Size s = Size(img.cols / 2, img.rows / 2);
+
+        Scalar color = Scalar(255, 255, 255);
+
+        ellipse(img, p, s, 0, 0, 360, color, thickness);
     }
 };
 
