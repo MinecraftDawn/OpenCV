@@ -377,6 +377,41 @@ public:
         waitKey(0);
     }
 
+    void showImg_6() {
+        Mat atom_image = Mat::zeros(400, 400, CV_8UC3);
+
+        for (int i = 0; i < 36; ++i) {
+            Ellipse(atom_image, 0 + i * 10);
+        }
+
+        namedWindow("test");
+        imshow("test", atom_image);
+
+        waitKey(0);
+
+    }
+
+    void showImg_7() {
+        Mat atom_image = Mat::zeros(400, 400, CV_8UC3);
+        Scalar color = Scalar(255, 255, 255);
+
+        Point p[2][2];
+        p[0][0] = Point(100, 200);
+        p[0][1] = Point(300, 200);
+        p[1][0] = Point(200, 100);
+        p[1][1] = Point(200, 300);
+
+        for (int i = 0; i < 2; ++i) {
+            line(atom_image, p[i][0],p[i][1],color,1);
+        }
+
+        namedWindow("test");
+        imshow("test", atom_image);
+
+        waitKey(0);
+
+    }
+
 private:
     void Ellipse(Mat img, double theta) {
         int thickness = 0;
@@ -403,6 +438,7 @@ private:
 
         ellipse(img, p, s, 0, 0, 360, color, thickness);
     }
+
 };
 
 #endif //OPENCV_SHOWIMAGE_H
