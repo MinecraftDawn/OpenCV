@@ -402,7 +402,7 @@ public:
         p[1][1] = Point(200, 300);
 
         for (int i = 0; i < 2; ++i) {
-            line(atom_image, p[i][0],p[i][1],color,1);
+            line(atom_image, p[i][0], p[i][1], color, 1);
         }
 
         namedWindow("test");
@@ -410,6 +410,76 @@ public:
 
         waitKey(0);
 
+    }
+
+    void showImg_8() {
+        Mat atom_image = Mat::zeros(800, 800, CV_8UC3);
+        Scalar color = Scalar(255, 255, 255);
+
+        Point center = Point(atom_image.cols / 2, atom_image.rows / 2);
+        Scalar white = Scalar(255, 255, 255);
+
+        double radius;
+
+        //外圓
+        for (int i = 0; i < 2; ++i) {
+            double size = 2 + 0.1 * i;
+            Size cirSize = Size(atom_image.cols / size, atom_image.rows / size);
+
+            ellipse(atom_image, center, cirSize, 0, 0, 360, white, 1);
+            radius = atom_image.cols / size;
+        }
+
+//        double squareHalfLength = radius / sqrt(2);
+//
+//        for (int i = 0; i < 2; ++i) {
+//            Point square1[4];
+//            double size = squareHalfLength / (1 + 0.02 * i);
+//
+//            square1[0] = Point(center.x - size, center.y - size);
+//            square1[1] = Point(center.x - size, center.y + size);
+//            square1[2] = Point(center.x + size, center.y + size);
+//            square1[3] = Point(center.x + size, center.y - size);
+//
+//            for (int j = 0; j < 3; ++j) {
+//                line(atom_image, square1[j], square1[j + 1], white, 1);
+//            }
+//            line(atom_image, square1[3], square1[0], white, 1);
+//
+//        }
+
+        /*
+         * 中間正方形
+         */
+        for (int i = 0; i < 3; ++i) {
+            Point square1[4];
+            double Degress = 45 + 30 * i;
+
+            for (int j = 0; j < 2; ++j) {
+                double InnerRadius = radius * (1 - 0.02 * j);
+
+                square1[0] = Point(center.x + cos(Degress / 180 * CV_PI) * InnerRadius,
+                                   center.y + sin(Degress / 180 * CV_PI) * InnerRadius);
+                square1[1] = Point(center.x + cos((Degress + 90) / 180 * CV_PI) * InnerRadius,
+                                   center.y + sin((Degress + 90) / 180 * CV_PI) * InnerRadius);
+                square1[2] = Point(center.x + cos((Degress + 180) / 180 * CV_PI) * InnerRadius,
+                                   center.y + sin((Degress + 180) / 180 * CV_PI) * InnerRadius);
+                square1[3] = Point(center.x + cos((Degress + 270) / 180 * CV_PI) * InnerRadius,
+                                   center.y + sin((Degress + 270) / 180 * CV_PI) * InnerRadius);
+
+                for (int k = 0; k < 3; ++k) {
+                    line(atom_image, square1[k], square1[k + 1], white, 1);
+                }
+                line(atom_image, square1[3], square1[0], white, 1);
+            }
+        }
+
+        cout << cos(0);
+
+        namedWindow("魔法陣");
+        imshow("魔法陣", atom_image);
+
+        waitKey(0);
     }
 
 private:
