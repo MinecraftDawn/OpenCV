@@ -475,11 +475,6 @@ public:
         }
 
         /*
-         * 暫時畫線
-         */
-        line(atom_image, center, squarePoint, white, 1);
-
-        /*
          * 月亮(內)
          */
         Point moonInnerCenter = center + (squarePoint - center) / 4 * 3;
@@ -492,12 +487,9 @@ public:
          */
         Point2d unitVec = getUnitVec(moonInnerCenter, center);
         Point2d moonInnerEdge = (Point2d) moonInnerCenter + unitVec * moonInnerRadius;
-        Point2d moonOutCenter = Point2d (moonInnerEdge + outSquarePoint)/2;
+        Point2d moonOutCenter = Point2d(moonInnerEdge + outSquarePoint) / 2;
 
-        double moonOutRadius = getPointDistance(moonInnerEdge,moonOutCenter);
-
-//        Point moonOutCenter = (Point2d) moonInnerCenter + unitVec * moonBroad;
-
+        double moonOutRadius = getPointDistance(moonInnerEdge, moonOutCenter);
         Size moonOutSize = Size(moonOutRadius, moonOutRadius);
 
         ellipse(atom_image, moonOutCenter, moonOutSize, 0, 0, 360, white);

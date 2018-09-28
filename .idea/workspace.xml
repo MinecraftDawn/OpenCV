@@ -49,8 +49,8 @@
       <file leaf-file-name="ShowImage.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
-              <caret line="494" column="85" selection-start-line="494" selection-start-column="85" selection-end-line="494" selection-end-column="85" />
+            <state relative-caret-position="980">
+              <caret line="497" column="74" lean-forward="true" selection-start-line="497" selection-start-column="74" selection-end-line="497" selection-end-column="74" />
               <folding>
                 <element signature="e#95#127#0" expanded="true" />
               </folding>
@@ -201,7 +201,7 @@
       <workItem from="1537868857532" duration="698000" />
       <workItem from="1537968385084" duration="1937000" />
       <workItem from="1538056133104" duration="7220000" />
-      <workItem from="1538134566174" duration="6291000" />
+      <workItem from="1538134566174" duration="6823000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1536679366015</created>
@@ -357,11 +357,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538146744683</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="魔法陣(外圓+內正方+內外月亮)">
+      <created>1538149743546</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1538149743546</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73959000" />
+    <option name="totallyTimeSpent" value="74491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1088" y="-508" width="1096" height="1896" extended-state="6" />
@@ -414,7 +421,8 @@
     <MESSAGE value="Line" />
     <MESSAGE value="魔法陣(外圓+內正方)" />
     <MESSAGE value="魔法陣(外圓+內正方+一半月亮)" />
-    <option name="LAST_COMMIT_MESSAGE" value="魔法陣(外圓+內正方+一半月亮)" />
+    <MESSAGE value="魔法陣(外圓+內正方+內外月亮)" />
+    <option name="LAST_COMMIT_MESSAGE" value="魔法陣(外圓+內正方+內外月亮)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -774,8 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="494" column="85" selection-start-line="494" selection-start-column="85" selection-end-line="494" selection-end-column="85" />
+        <state relative-caret-position="980">
+          <caret line="497" column="74" lean-forward="true" selection-start-line="497" selection-start-column="74" selection-end-line="497" selection-end-column="74" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
           </folding>
