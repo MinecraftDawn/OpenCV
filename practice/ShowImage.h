@@ -419,29 +419,38 @@ public:
         Point center = Point(atom_image.cols / 2, atom_image.rows / 2);
         Scalar white = Scalar(255, 255, 255);
 
-        double radius;
+        double inRadius;
+        double moonBroad;
+        double outRadius;
 
         /*
          * 外圓
          */
         for (int i = 0; i < 2; ++i) {
-            double size = 2 + 0.1 * i;
+            double size = 2 + 0.15 * i;
             Size cirSize = Size(atom_image.cols / size, atom_image.rows / size);
 
             ellipse(atom_image, center, cirSize, 0, 0, 360, white, 1);
-            radius = atom_image.cols / size;
+            inRadius = atom_image.cols / size;
+
+            moonBroad = atom_image.cols / 2 - atom_image.cols / size;
+
+            if (i == 0) {
+                outRadius = atom_image.cols / size;
+            }
         }
 
         /*
          * 中間正方形
          */
         Point squarePoint;
+        Point2d outSquarePoint;
         for (int i = 0; i < 3; ++i) {
             Point square1[4];
             double Degress = 45 + 30 * i;
 
             for (int j = 0; j < 2; ++j) {
-                double InnerRadius = radius * (1 - 0.02 * j);
+                double InnerRadius = inRadius * (1 - 0.02 * j);
 
                 square1[0] = Point(center.x + cos(Degress / 180 * CV_PI) * InnerRadius,
                                    center.y + sin(Degress / 180 * CV_PI) * InnerRadius);
@@ -459,15 +468,39 @@ public:
 
                 if (j == 0) {
                     squarePoint = square1[1];
+                    outSquarePoint = Point(center.x + cos((Degress + 90) / 180 * CV_PI) * outRadius,
+                                           center.y + sin((Degress + 90) / 180 * CV_PI) * outRadius);
                 }
             }
         }
 
-        Point moonInnerCenter = center + (squarePoint - center) / 4 * 3;
-        double distance = getDistance(squarePoint, moonInnerCenter);
-        Size moonSize = Size(distance, distance);
-        ellipse(atom_image, moonInnerCenter, moonSize, 0, 0, 360, white);
+        /*
+         * 暫時畫線
+         */
+        line(atom_image, center, squarePoint, white, 1);
 
+        /*
+         * 月亮(內)
+         */
+        Point moonInnerCenter = center + (squarePoint - center) / 4 * 3;
+        double moonInnerRadius = getPointDistance(squarePoint, moonInnerCenter);
+        Size moonInnerSize = Size(moonInnerRadius, moonInnerRadius);
+        ellipse(atom_image, moonInnerCenter, moonInnerSize, 0, 0, 360, white);
+
+        /*
+         * 月亮(外)
+         */
+        Point2d unitVec = getUnitVec(moonInnerCenter, center);
+        Point2d moonInnerEdge = (Point2d) moonInnerCenter + unitVec * moonInnerRadius;
+        Point2d moonOutCenter = Point2d (moonInnerEdge + outSquarePoint)/2;
+
+        double moonOutRadius = getPointDistance(moonInnerEdge,moonOutCenter);
+
+//        Point moonOutCenter = (Point2d) moonInnerCenter + unitVec * moonBroad;
+
+        Size moonOutSize = Size(moonOutRadius, moonOutRadius);
+
+        ellipse(atom_image, moonOutCenter, moonOutSize, 0, 0, 360, white);
 
         namedWindow("魔法陣");
         imshow("魔法陣", atom_image);
@@ -502,9 +535,26 @@ private:
         ellipse(img, p, s, 0, 0, 360, color, thickness);
     }
 
-    double getDistance(Point p1, Point p2) {
+    double getPointDistance(Point p1, Point p2) {
         Point subPoint = p1 - p2;
         return sqrt(pow(subPoint.x, 2) + pow(subPoint.y, 2));
+    }
+
+    double getPointDistance(Point2d p1, Point2d p2) {
+        Point2d subPoint = p1 - p2;
+        return sqrt(pow(subPoint.x, 2) + pow(subPoint.y, 2));
+    }
+
+    Point2d getUnitVec(Point p1, Point p2) {
+        Point2d unit;
+
+        unit = p2 - p1;
+        double distance = getPointDistance(p1, p2);
+
+        unit.x = unit.x / distance;
+        unit.y = unit.y / distance;
+
+        return unit;
     }
 
 };
