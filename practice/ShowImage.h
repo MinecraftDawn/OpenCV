@@ -421,7 +421,9 @@ public:
 
         double radius;
 
-        //外圓
+        /*
+         * 外圓
+         */
         for (int i = 0; i < 2; ++i) {
             double size = 2 + 0.1 * i;
             Size cirSize = Size(atom_image.cols / size, atom_image.rows / size);
@@ -430,27 +432,10 @@ public:
             radius = atom_image.cols / size;
         }
 
-//        double squareHalfLength = radius / sqrt(2);
-//
-//        for (int i = 0; i < 2; ++i) {
-//            Point square1[4];
-//            double size = squareHalfLength / (1 + 0.02 * i);
-//
-//            square1[0] = Point(center.x - size, center.y - size);
-//            square1[1] = Point(center.x - size, center.y + size);
-//            square1[2] = Point(center.x + size, center.y + size);
-//            square1[3] = Point(center.x + size, center.y - size);
-//
-//            for (int j = 0; j < 3; ++j) {
-//                line(atom_image, square1[j], square1[j + 1], white, 1);
-//            }
-//            line(atom_image, square1[3], square1[0], white, 1);
-//
-//        }
-
         /*
          * 中間正方形
          */
+        Point squarePoint;
         for (int i = 0; i < 3; ++i) {
             Point square1[4];
             double Degress = 45 + 30 * i;
@@ -471,10 +456,18 @@ public:
                     line(atom_image, square1[k], square1[k + 1], white, 1);
                 }
                 line(atom_image, square1[3], square1[0], white, 1);
+
+                if (j == 0) {
+                    squarePoint = square1[1];
+                }
             }
         }
 
-        cout << cos(0);
+        Point moonInnerCenter = center + (squarePoint - center) / 4 * 3;
+        double distance = getDistance(squarePoint, moonInnerCenter);
+        Size moonSize = Size(distance, distance);
+        ellipse(atom_image, moonInnerCenter, moonSize, 0, 0, 360, white);
+
 
         namedWindow("魔法陣");
         imshow("魔法陣", atom_image);
@@ -507,6 +500,11 @@ private:
         Scalar color = Scalar(255, 255, 255);
 
         ellipse(img, p, s, 0, 0, 360, color, thickness);
+    }
+
+    double getDistance(Point p1, Point p2) {
+        Point subPoint = p1 - p2;
+        return sqrt(pow(subPoint.x, 2) + pow(subPoint.y, 2));
     }
 
 };
