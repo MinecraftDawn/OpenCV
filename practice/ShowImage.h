@@ -501,7 +501,7 @@ public:
     }
 
 private:
-    void Ellipse(Mat img, double theta) {
+    void Ellipse(Mat img, double theta) {//橢圓
         int thickness = 0;
 
         int col = img.cols;
@@ -514,7 +514,7 @@ private:
         ellipse(img, p, s, theta, 0, 360, color, thickness);
     }
 
-    void Circle(Mat img) {
+    void Circle(Mat img) {//圓型
         int thickness = 1;
         int lineType = 1;
 
@@ -527,17 +527,17 @@ private:
         ellipse(img, p, s, 0, 0, 360, color, thickness);
     }
 
-    double getPointDistance(Point p1, Point p2) {
+    double getPointDistance(Point p1, Point p2) {//取得點之間的距離
         Point subPoint = p1 - p2;
         return sqrt(pow(subPoint.x, 2) + pow(subPoint.y, 2));
     }
 
-    double getPointDistance(Point2d p1, Point2d p2) {
+    double getPointDistance(Point2d p1, Point2d p2) {//取得點之間的距離
         Point2d subPoint = p1 - p2;
         return sqrt(pow(subPoint.x, 2) + pow(subPoint.y, 2));
     }
 
-    Point2d getUnitVec(Point p1, Point p2) {
+    Point2d getUnitVec(Point p1, Point p2) {//取得單位向量
         Point2d unit;
 
         unit = p2 - p1;
