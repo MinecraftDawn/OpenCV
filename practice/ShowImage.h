@@ -426,7 +426,8 @@ public:
         /*
          * 外圓
          */
-        for (int i = 0; i < 2; ++i) {
+        int circleNum = 3;
+        for (int i = 0; i < circleNum; ++i) {
             double size = 2 + 0.15 * i;
             Size cirSize = Size(atom_image.cols / size, atom_image.rows / size);
 
@@ -434,6 +435,26 @@ public:
             inRadius = atom_image.cols / size;
 
             moonBroad = atom_image.cols / 2 - atom_image.cols / size;
+
+            /*
+             * 圓內畫線
+             */
+            if (i == circleNum - 1) {
+                double preCirRadius = atom_image.cols / (2 + 0.15 * (circleNum - 2));
+                double curCirRadius = atom_image.cols / (2 + 0.15 * (circleNum - 1));
+
+                Point2d prePoint, curPoint;
+
+                int cirLineNum = 72;
+                for (int j = 0; j < cirLineNum; ++j) {
+                    prePoint = Point2d(center.x + cos(2 * CV_PI / cirLineNum * j) * preCirRadius,
+                                       center.y + sin(2 * CV_PI / cirLineNum * j) * preCirRadius);
+                    curPoint = Point2d(center.x + cos(2 * CV_PI / cirLineNum * j) * curCirRadius,
+                                       center.y + sin(2 * CV_PI / cirLineNum * j) * curCirRadius);
+
+                    line(atom_image, prePoint, curPoint, white);
+                }
+            }
 
             if (i == 0) {
                 outRadius = atom_image.cols / size;
