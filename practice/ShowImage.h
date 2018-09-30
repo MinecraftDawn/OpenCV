@@ -466,12 +466,13 @@ public:
          */
         Point squarePoint;
         Point2d outSquarePoint;
+        double InnerRadius;
         for (int i = 0; i < 3; ++i) {
             Point square1[4];
             double Degress = 45 + 30 * i;
 
             for (int j = 0; j < 2; ++j) {
-                double InnerRadius = inRadius * (1 - 0.02 * j);
+                InnerRadius = inRadius * (1 - 0.02 * j);
 
                 square1[0] = Point(center.x + cos(Degress / 180 * CV_PI) * InnerRadius,
                                    center.y + sin(Degress / 180 * CV_PI) * InnerRadius);
@@ -491,6 +492,32 @@ public:
                     squarePoint = square1[1];
                     outSquarePoint = Point(center.x + cos((Degress + 90) / 180 * CV_PI) * outRadius,
                                            center.y + sin((Degress + 90) / 180 * CV_PI) * outRadius);
+                }
+            }
+        }
+
+        /*
+         * ¤º¶ê+µe½u
+         */
+        for (int i = 0; i < 2; ++i) {
+            double squInnerCirRadius = InnerRadius / (1 + 0.05 * i) / sqrt(2);
+            Size innerCirSize = Size(squInnerCirRadius, squInnerCirRadius);
+
+            ellipse(atom_image, center, innerCirSize, 0, 0, 360, white);
+
+            if (i == 0){
+                double preCirRadius = InnerRadius / (1 + 0.05 * i) / sqrt(2);
+                double curCirRadius = InnerRadius / (1 + 0.05 * (i+1)) / sqrt(2);
+                Point2d prePoint, curPoint;
+
+                int cirLineNum = 72;
+                for (int j = 0; j < cirLineNum; ++j) {
+                    prePoint = Point2d(center.x + cos(2 * CV_PI / cirLineNum * j) * preCirRadius,
+                                       center.y + sin(2 * CV_PI / cirLineNum * j) * preCirRadius);
+                    curPoint = Point2d(center.x + cos(2 * CV_PI / cirLineNum * j) * curCirRadius,
+                                       center.y + sin(2 * CV_PI / cirLineNum * j) * curCirRadius);
+
+                    line(atom_image, prePoint, curPoint, white);
                 }
             }
         }
