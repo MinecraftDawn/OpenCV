@@ -523,41 +523,70 @@ public:
         }
 
         /*
-         * 六芒星
+         * 五芒星(前)
          */
         double startDistance = InnerRadius / sqrt(2);
         Point2d startOutAngle[5];
         Point2d startInAngle[5];
 
-        double startRotate = 1 / 6;
         int angleNum = 5;
         for (int i = 0; i < angleNum; ++i) {
             startOutAngle[i] = Point2d(
-                    center.x + cos(2 * CV_PI / angleNum * i + startRotate * CV_PI) * startDistance,
-                    center.y + sin(2 * CV_PI / angleNum * i + startRotate * CV_PI) * startDistance);
+                    center.x + cos(2 * CV_PI / angleNum * i) * startDistance,
+                    center.y + sin(2 * CV_PI / angleNum * i) * startDistance);
 
             startInAngle[i] = Point2d(
                     center.x + cos(2 * CV_PI / angleNum * i +
-                                   (startRotate + ((double) 1 / 5)) * CV_PI) * startDistance / 5*2,
+                                   (double(1) / 5) * CV_PI) * startDistance / 5 * 2,
 
                     center.y + sin(2 * CV_PI / angleNum * i +
-                                   (startRotate + ((double) 1 / 5)) * CV_PI) * startDistance / 5*2);
+                                   (double(1) / 5) * CV_PI) * startDistance / 5 * 2);
         }
         for (int i = 0; i < angleNum; ++i) {
             line(atom_image, startOutAngle[i], startInAngle[i], white);
 
-            if(i!=angleNum-1){
-                line(atom_image, startOutAngle[i+1], startInAngle[i], white);
+            if (i != angleNum - 1) {
+                line(atom_image, startOutAngle[i + 1], startInAngle[i], white);
             }
         }
         line(atom_image, startOutAngle[0], startInAngle[4], white);
-//        line(atom_image, startOutAngle[0], startInAngle[4], white);
+
+        /*
+        * 五芒星(後)
+        */
+        double starRotate = double(2)/10;
+        Point2d startOutAngle2[5];
+        Point2d startInAngle2[5];
+
+        for (int i = 0; i < angleNum; ++i) {
+            startOutAngle2[i] = Point2d(
+                    center.x + cos(2 * CV_PI / angleNum * i + starRotate * CV_PI) * startDistance,
+                    center.y + sin(2 * CV_PI / angleNum * i + starRotate * CV_PI) * startDistance);
+
+            startInAngle2[i] = Point2d(
+                    center.x + cos(2 * CV_PI / angleNum * i +
+                                   (starRotate + (double(1) / 5)) * CV_PI) * startDistance / 5 * 2,
+
+                    center.y + sin(2 * CV_PI / angleNum * i +
+                                   (starRotate + (double(1) / 5)) * CV_PI) * startDistance / 5 * 2);
+        }
+        for (int i = 0; i < angleNum; ++i) {
+            line(atom_image, startOutAngle2[i], startInAngle2[i], white);
+
+            if (i != angleNum - 1) {
+                line(atom_image, startOutAngle2[i + 1], startInAngle2[i], white);
+            }
+        }
+        line(atom_image, startOutAngle2[0], startInAngle2[4], white);
+
+
 
         /*
          * 月亮(內)
          */
         Point moonInnerCenter = center + (squarePoint - center) / 4 * 3;
         double moonInnerRadius = getPointDistance(squarePoint, moonInnerCenter);
+
         Size moonInnerSize = Size(moonInnerRadius, moonInnerRadius);
         ellipse(atom_image, moonInnerCenter, moonInnerSize, 0, 0, 360, white);
 
