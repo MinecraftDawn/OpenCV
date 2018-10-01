@@ -505,9 +505,9 @@ public:
 
             ellipse(atom_image, center, innerCirSize, 0, 0, 360, white);
 
-            if (i == 0){
+            if (i == 0) {
                 double preCirRadius = InnerRadius / (1 + 0.05 * i) / sqrt(2);
-                double curCirRadius = InnerRadius / (1 + 0.05 * (i+1)) / sqrt(2);
+                double curCirRadius = InnerRadius / (1 + 0.05 * (i + 1)) / sqrt(2);
                 Point2d prePoint, curPoint;
 
                 int cirLineNum = 72;
@@ -521,6 +521,37 @@ public:
                 }
             }
         }
+
+        /*
+         * 六芒星
+         */
+        double startDistance = InnerRadius / sqrt(2);
+        Point2d startOutAngle[5];
+        Point2d startInAngle[5];
+
+        double startRotate = 1 / 6;
+        int angleNum = 5;
+        for (int i = 0; i < angleNum; ++i) {
+            startOutAngle[i] = Point2d(
+                    center.x + cos(2 * CV_PI / angleNum * i + startRotate * CV_PI) * startDistance,
+                    center.y + sin(2 * CV_PI / angleNum * i + startRotate * CV_PI) * startDistance);
+
+            startInAngle[i] = Point2d(
+                    center.x + cos(2 * CV_PI / angleNum * i +
+                                   (startRotate + ((double) 1 / 5)) * CV_PI) * startDistance / 5*2,
+
+                    center.y + sin(2 * CV_PI / angleNum * i +
+                                   (startRotate + ((double) 1 / 5)) * CV_PI) * startDistance / 5*2);
+        }
+        for (int i = 0; i < angleNum; ++i) {
+            line(atom_image, startOutAngle[i], startInAngle[i], white);
+
+            if(i!=angleNum-1){
+                line(atom_image, startOutAngle[i+1], startInAngle[i], white);
+            }
+        }
+        line(atom_image, startOutAngle[0], startInAngle[4], white);
+//        line(atom_image, startOutAngle[0], startInAngle[4], white);
 
         /*
          * 月亮(內)
