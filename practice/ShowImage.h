@@ -11,6 +11,8 @@
 #include <opencv\cv.h>
 #include <iostream>
 #include <stdint.h>
+#include <random>
+#include <ctime>
 
 using namespace cv;
 using namespace std;
@@ -554,7 +556,7 @@ public:
         /*
         * 五芒星(後)
         */
-        double starRotate = double(2)/10;
+        double starRotate = double(2) / 10;
         Point2d startOutAngle2[5];
         Point2d startInAngle2[5];
 
@@ -608,6 +610,51 @@ public:
         waitKey(0);
     }
 
+    void showImg_9() {
+        Mat image = imread("B:\\血小板.jpg", 1);
+
+        Mat hsv;
+
+        cvtColor(image, hsv, CV_BGR2HSV);
+
+        namedWindow("www", CV_WINDOW_AUTOSIZE);
+
+        imshow("www", hsv);
+
+        waitKey(0);
+
+    }
+
+    void showImg_10() {
+        Mat image = imread("B:\\lena.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+
+        Mat new_image = Mat::zeros(image.size(), image.type());
+
+        srand(time(NULL));
+        for (int i = 0; i < image.rows; ++i) {
+            for (int j = 0; j < image.cols; ++j) {
+                unsigned int color = image.at<uint8_t>(i, j);
+
+                image.at<uint8_t>(i, j) = (color - 30) * 1.3;
+
+            }
+
+        }
+
+        Mat ch;
+        int hs = 256;
+        float range[] = {0, 255};
+        const float *hisRange = {range};
+        calcHist(&image, 1, 0, Mat(), ch, 1, &hs, &hisRange);
+        Mat showHistImg(256, 256, CV_8UC1, Scalar(255));
+
+        drawHistImg(ch, showHistImg);
+        imshow("直方圖", showHistImg);
+        imshow("Display", image);
+        waitKey(0);
+
+    }
+
 private:
     void Ellipse(Mat img, double theta) {//橢圓
         int thickness = 0;
@@ -655,6 +702,56 @@ private:
         unit.y = unit.y / distance;
 
         return unit;
+    }
+
+    Point2d getIntersection(Point2d p1, Point2d p2, Point2d p3, Point2d p4) {
+        double M1[2][3], M2[2][3];
+        M1[0][0] = p1.x;
+        M1[0][1] = 1;
+        M1[0][2] = p1.y;
+
+        M1[1][0] = p2.x;
+        M1[1][1] = 1;
+        M1[1][2] = p2.y;
+
+        M2[0][0] = p3.x;
+        M2[0][1] = 1;
+        M2[0][2] = p3.y;
+
+        M2[1][0] = p4.x;
+        M2[1][1] = 1;
+        M2[1][2] = p4.y;
+
+        double d;
+        d = M2[0][0] / M1[0][0];
+        for (int i = 0; i < 3; ++i) {
+            M1[0][2 - i] /= M1[0][0];
+        }
+        for (int i = 0; i < 3; ++i) {
+            M1[1][i] += M1[0][i] * d;
+        }
+        for (int i = 0; i < 2; ++i) {
+            M1[0][1 - i] /= M1[0][1];
+        }
+        d = M2[0][0] / M1[0][0];
+
+    }
+
+    void drawHistImg(const Mat &src, Mat &dst) {
+        int histSize = 256;
+        float histMaxValue = 0;
+        for (int i = 0; i < histSize; i++) {
+            float tempValue = src.at<float>(i);
+            if (histMaxValue < tempValue) {
+                histMaxValue = tempValue;
+            }
+        }
+
+        float scale = (0.9 * 256) / histMaxValue;
+        for (int i = 0; i < histSize; i++) {
+            int intensity = static_cast<int>(src.at<float>(i) * scale);
+            line(dst, Point(i, 255), Point(i, 255 - intensity), Scalar(0));
+        }
     }
 
 };
