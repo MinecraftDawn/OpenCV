@@ -628,8 +628,6 @@ public:
     void showImg_10() {
         Mat image = imread("B:\\lena.jpg", CV_LOAD_IMAGE_GRAYSCALE);
 
-        Mat new_image = Mat::zeros(image.size(), image.type());
-
         srand(time(NULL));
         for (int i = 0; i < image.rows; ++i) {
             for (int j = 0; j < image.cols; ++j) {
@@ -722,8 +720,9 @@ private:
         M2[1][1] = 1;
         M2[1][2] = p4.y;
 
+        //¯x°}³B²z
         double d;
-        d = M2[0][0] / M1[0][0];
+        d = (M1[0][0] == 0) ? 0 : M2[0][0] / M1[0][0];
         for (int i = 0; i < 3; ++i) {
             M1[0][2 - i] /= M1[0][0];
         }
@@ -733,6 +732,7 @@ private:
         for (int i = 0; i < 2; ++i) {
             M1[0][1 - i] /= M1[0][1];
         }
+
         d = M2[0][0] / M1[0][0];
 
     }
