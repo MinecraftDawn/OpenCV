@@ -17,7 +17,6 @@
 using namespace cv;
 using namespace std;
 
-
 class ShowImage {
 public:
 
@@ -606,6 +605,8 @@ public:
 
         namedWindow("Å]ªk°}");
         imshow("Å]ªk°}", atom_image);
+
+        imwrite("Å]ªk°}.png",atom_image);
 
         waitKey(0);
     }
