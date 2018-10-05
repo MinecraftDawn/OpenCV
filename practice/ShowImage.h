@@ -571,14 +571,23 @@ public:
                     center.y + sin(2 * CV_PI / angleNum * i +
                                    (starRotate + (double(1) / 5)) * CV_PI) * startDistance / 5 * 2);
         }
-        for (int i = 0; i < angleNum; ++i) {
-            line(atom_image, startOutAngle2[i], startInAngle2[i], white);
 
-            if (i != angleNum - 1) {
-                line(atom_image, startOutAngle2[i + 1], startInAngle2[i], white);
-            }
-        }
-        line(atom_image, startOutAngle2[0], startInAngle2[4], white);
+        Point2d test = getIntersection(startOutAngle[0], startInAngle[0], startOutAngle2[0], startInAngle2[4]);
+
+        line(atom_image, test, startOutAngle2[0], white);
+
+
+
+
+
+//        for (int i = 0; i < angleNum; ++i) {
+//            line(atom_image, startOutAngle2[i], startInAngle2[i], white);
+//
+//            if (i != angleNum - 1) {
+//                line(atom_image, startOutAngle2[i + 1], startInAngle2[i], white);
+//            }
+//        }
+//        line(atom_image, startOutAngle2[0], startInAngle2[4], white);
 
 
 
@@ -635,9 +644,7 @@ public:
                 unsigned int color = image.at<uint8_t>(i, j);
 
                 image.at<uint8_t>(i, j) = (color - 30) * 1.3;
-
             }
-
         }
 
         Mat ch;
@@ -704,11 +711,16 @@ private:
     }
 
     Point2d getIntersection(Point2d p1, Point2d p2, Point2d p3, Point2d p4) {
+        cout << p1 << endl
+             << p2 << endl
+             << p3 << endl
+             << p4 << endl;
+
         double m1, m2, b1, b2;
-        m1 = (p1.x - p2.x) / (p1.y - p2.y);
+        m1 = (p1.x - p2.x == 0) ? 0 : (p1.y - p2.y) / (p1.x - p2.x);
         b1 = p1.y - p1.x * m1;
 
-        m2 = (p3.x - p4.x) / (p3.y - p4.y);
+        m2 = (p3.x - p4.x == 0) ? 0 : (p3.y - p4.y) / (p3.x - p4.x);
         b2 = p3.y - p3.x * m2;
 
         //m1x-y=-b1
@@ -718,10 +730,12 @@ private:
         deltaX = -b1 * (-1) - (-1) * -b2;
         deltaY = m1 * (-b2) - (-b1) * m2;
 
-        if(delta == 0){
-            return Point2d(0,0);
-        }else{
-            return  Point2d(deltaX/delta,deltaY/delta);
+        cout << Point2d(deltaX / delta, deltaY / delta) << endl;
+
+        if (delta == 0) {
+            return Point2d(0, 0);
+        } else {
+            return Point2d(deltaX / delta, deltaY / delta);
         }
 
     }
