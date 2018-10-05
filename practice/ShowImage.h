@@ -606,7 +606,7 @@ public:
         namedWindow("魔法陣");
         imshow("魔法陣", atom_image);
 
-        imwrite("魔法陣.png",atom_image);
+        imwrite("魔法陣.png", atom_image);
 
         waitKey(0);
     }
@@ -704,37 +704,25 @@ private:
     }
 
     Point2d getIntersection(Point2d p1, Point2d p2, Point2d p3, Point2d p4) {
-        double M1[2][3], M2[2][3];
-        M1[0][0] = p1.x;
-        M1[0][1] = 1;
-        M1[0][2] = p1.y;
+        double m1, m2, b1, b2;
+        m1 = (p1.x - p2.x) / (p1.y - p2.y);
+        b1 = p1.y - p1.x * m1;
 
-        M1[1][0] = p2.x;
-        M1[1][1] = 1;
-        M1[1][2] = p2.y;
+        m2 = (p3.x - p4.x) / (p3.y - p4.y);
+        b2 = p3.y - p3.x * m2;
 
-        M2[0][0] = p3.x;
-        M2[0][1] = 1;
-        M2[0][2] = p3.y;
+        //m1x-y=-b1
+        //m2x-y=-b2
+        double delta, deltaX, deltaY;
+        delta = m1 * (-1) - (-1) * m2;
+        deltaX = -b1 * (-1) - (-1) * -b2;
+        deltaY = m1 * (-b2) - (-b1) * m2;
 
-        M2[1][0] = p4.x;
-        M2[1][1] = 1;
-        M2[1][2] = p4.y;
-
-        //矩陣處理
-        double d;
-        d = (M1[0][0] == 0) ? 0 : M2[0][0] / M1[0][0];
-        for (int i = 0; i < 3; ++i) {
-            M1[0][2 - i] /= M1[0][0];
+        if(delta == 0){
+            return Point2d(0,0);
+        }else{
+            return  Point2d(deltaX/delta,deltaY/delta);
         }
-        for (int i = 0; i < 3; ++i) {
-            M1[1][i] += M1[0][i] * d;
-        }
-        for (int i = 0; i < 2; ++i) {
-            M1[0][1 - i] /= M1[0][1];
-        }
-
-        d = M2[0][0] / M1[0][0];
 
     }
 
