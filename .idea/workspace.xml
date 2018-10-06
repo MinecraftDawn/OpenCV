@@ -16,11 +16,6 @@
   <component name="ChangeListManager">
     <list default="true" id="696f3d8e-a7be-4a90-9077-a4a9d5cae36e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/vc140.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/ShowImage.h" beforeDir="false" afterPath="$PROJECT_DIR$/practice/ShowImage.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -52,8 +47,8 @@
       <file leaf-file-name="ShowImage.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="583" column="67" selection-start-line="583" selection-start-column="67" selection-end-line="583" selection-end-column="67" />
+            <state relative-caret-position="662">
+              <caret line="586" column="70" lean-forward="true" selection-start-line="586" selection-start-column="70" selection-end-line="586" selection-end-column="70" />
               <folding>
                 <element signature="e#95#127#0" expanded="true" />
               </folding>
@@ -219,7 +214,7 @@
       <workItem from="1538626906878" duration="5580000" />
       <workItem from="1538655545772" duration="179000" />
       <workItem from="1538713773357" duration="10492000" />
-      <workItem from="1538832955817" duration="1727000" />
+      <workItem from="1538832955817" duration="2643000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1536679366015</created>
@@ -459,11 +454,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538752913714</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="內圈背景星星">
+      <created>1538836472722</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1538836472722</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131980000" />
+    <option name="totallyTimeSpent" value="132896000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1088" y="-508" width="1096" height="1896" extended-state="6" />
@@ -471,11 +473,11 @@
     <layout>
       <window_info anchor="bottom" content_ui="combo" id="Project" order="11" weight="0.12022472" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.18595506" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.18595506" />
       <window_info anchor="bottom" id="CMake" order="0" weight="0.32921347" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32977527" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.1741573" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.1741573" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.14550562" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -496,7 +498,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test" />
     <MESSAGE value="8" />
     <MESSAGE value="Debug 8" />
     <MESSAGE value="雜訊" />
@@ -521,7 +522,8 @@
     <MESSAGE value="交點" />
     <MESSAGE value="焦點" />
     <MESSAGE value="焦點(Debug)" />
-    <option name="LAST_COMMIT_MESSAGE" value="焦點(Debug)" />
+    <MESSAGE value="內圈背景星星" />
+    <option name="LAST_COMMIT_MESSAGE" value="內圈背景星星" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -884,8 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="583" column="67" selection-start-line="583" selection-start-column="67" selection-end-line="583" selection-end-column="67" />
+        <state relative-caret-position="662">
+          <caret line="586" column="70" lean-forward="true" selection-start-line="586" selection-start-column="70" selection-end-line="586" selection-end-column="70" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
           </folding>

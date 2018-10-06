@@ -585,17 +585,9 @@ public:
 
             line(atom_image, intersection1, startOutAngle2[i], white);
             line(atom_image, intersection2, startOutAngle2[i], white);
+            line(atom_image, startInAngle[i], startOutAngle2[i],white);
         }
 
-
-//        for (int i = 0; i < angleNum; ++i) {
-//            line(atom_image, startOutAngle2[i], startInAngle2[i], white);
-//
-//            if (i != angleNum - 1) {
-//                line(atom_image, startOutAngle2[i + 1], startInAngle2[i], white);
-//            }
-//        }
-//        line(atom_image, startOutAngle2[0], startInAngle2[4], white);
 
 
 
@@ -733,8 +725,6 @@ private:
         delta = m1 * (-1) - (-1) * m2;
         deltaX = -b1 * (-1) - (-1) * -b2;
         deltaY = m1 * (-b2) - (-b1) * m2;
-
-        cout << Point2d(deltaX / delta, deltaY / delta) << endl;
 
         if (delta == 0) {
             return Point2d(0, 0);
