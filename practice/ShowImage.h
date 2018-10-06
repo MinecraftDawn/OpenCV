@@ -572,12 +572,20 @@ public:
                                    (starRotate + (double(1) / 5)) * CV_PI) * startDistance / 5 * 2);
         }
 
-        Point2d test = getIntersection(startOutAngle[0], startInAngle[0], startOutAngle2[0], startInAngle2[4]);
+        for (int i = 0; i < angleNum; ++i) {
+            Point2d intersection1 = getIntersection(startOutAngle[i],
+                                                    startInAngle[i],
+                                                    startOutAngle2[i],
+                                                    startInAngle2[(i + 4) % 5]);
 
-        line(atom_image, test, startOutAngle2[0], white);
+            Point2d intersection2 = getIntersection(startOutAngle[(i + 1) % 5],
+                                                    startInAngle[i],
+                                                    startOutAngle2[i],
+                                                    startInAngle2[i]);
 
-
-
+            line(atom_image, intersection1, startOutAngle2[i], white);
+            line(atom_image, intersection2, startOutAngle2[i], white);
+        }
 
 
 //        for (int i = 0; i < angleNum; ++i) {
@@ -711,10 +719,6 @@ private:
     }
 
     Point2d getIntersection(Point2d p1, Point2d p2, Point2d p3, Point2d p4) {
-        cout << p1 << endl
-             << p2 << endl
-             << p3 << endl
-             << p4 << endl;
 
         double m1, m2, b1, b2;
         m1 = (p1.x - p2.x == 0) ? 0 : (p1.y - p2.y) / (p1.x - p2.x);

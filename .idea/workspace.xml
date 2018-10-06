@@ -21,7 +21,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/ShowImage.h" beforeDir="false" afterPath="$PROJECT_DIR$/practice/ShowImage.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -53,8 +52,8 @@
       <file leaf-file-name="ShowImage.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="726" column="66" selection-start-line="726" selection-start-column="66" selection-end-line="726" selection-end-column="66" />
+            <state relative-caret-position="840">
+              <caret line="583" column="67" selection-start-line="583" selection-start-column="67" selection-end-line="583" selection-end-column="67" />
               <folding>
                 <element signature="e#95#127#0" expanded="true" />
               </folding>
@@ -129,6 +128,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,7 +145,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,7 +218,8 @@
       <workItem from="1538568246656" duration="2122000" />
       <workItem from="1538626906878" duration="5580000" />
       <workItem from="1538655545772" duration="179000" />
-      <workItem from="1538713773357" duration="9838000" />
+      <workItem from="1538713773357" duration="10492000" />
+      <workItem from="1538832955817" duration="1727000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1536679366015</created>
@@ -452,11 +452,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538715227252</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="焦點(Debug)">
+      <created>1538752913714</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1538752913714</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129599000" />
+    <option name="totallyTimeSpent" value="131980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1088" y="-508" width="1096" height="1896" extended-state="6" />
@@ -489,7 +496,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="RGB" />
     <MESSAGE value="test" />
     <MESSAGE value="8" />
     <MESSAGE value="Debug 8" />
@@ -514,7 +520,8 @@
     <MESSAGE value="imwrite" />
     <MESSAGE value="交點" />
     <MESSAGE value="焦點" />
-    <option name="LAST_COMMIT_MESSAGE" value="焦點" />
+    <MESSAGE value="焦點(Debug)" />
+    <option name="LAST_COMMIT_MESSAGE" value="焦點(Debug)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -877,8 +884,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="726" column="66" selection-start-line="726" selection-start-column="66" selection-end-line="726" selection-end-column="66" />
+        <state relative-caret-position="840">
+          <caret line="583" column="67" selection-start-line="583" selection-start-column="67" selection-end-line="583" selection-end-column="67" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
           </folding>
