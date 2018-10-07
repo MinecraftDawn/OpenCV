@@ -546,11 +546,9 @@ public:
         for (int i = 0; i < angleNum; ++i) {
             line(atom_image, startOutAngle[i], startInAngle[i], white);
 
-            if (i != angleNum - 1) {
-                line(atom_image, startOutAngle[i + 1], startInAngle[i], white);
-            }
+            line(atom_image, startOutAngle[(i + 1) % 5], startInAngle[i % 5], white);
         }
-        line(atom_image, startOutAngle[0], startInAngle[4], white);
+
 
         /*
         * 五芒星(後)
@@ -572,6 +570,7 @@ public:
                                    (starRotate + (double(1) / 5)) * CV_PI) * startDistance / 5 * 2);
         }
 
+        //取得焦點，並且畫線(星星邊緣*2&中間線)
         for (int i = 0; i < angleNum; ++i) {
             Point2d intersection1 = getIntersection(startOutAngle[i],
                                                     startInAngle[i],
@@ -585,7 +584,7 @@ public:
 
             line(atom_image, intersection1, startOutAngle2[i], white);
             line(atom_image, intersection2, startOutAngle2[i], white);
-            line(atom_image, startInAngle[i], startOutAngle2[i],white);
+            line(atom_image, startInAngle[i], startOutAngle2[i], white);
         }
 
 
@@ -660,6 +659,7 @@ public:
         waitKey(0);
 
     }
+
 
 private:
     void Ellipse(Mat img, double theta) {//橢圓
