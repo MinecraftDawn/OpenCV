@@ -435,8 +435,6 @@ public:
             ellipse(atom_image, center, cirSize, 0, 0, 360, white, 1);
             inRadius = atom_image.cols / size;
 
-            moonBroad = atom_image.cols / 2 - atom_image.cols / size;
-
             /*
              * ¶ê¤ºµe½u
              */
