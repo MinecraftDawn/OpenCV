@@ -8,11 +8,13 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/features2d/features2d.hpp"
 #include <opencv\cv.h>
 #include <iostream>
 #include <stdint.h>
 #include <random>
 #include <ctime>
+#include <vector>
 
 using namespace cv;
 using namespace std;
@@ -654,6 +656,42 @@ public:
         drawHistImg(ch, showHistImg);
         imshow("直方圖", showHistImg);
         imshow("Display", image);
+        waitKey(0);
+
+    }
+
+    void showImg_11() {
+        Mat dst;
+        int KERNEL_LENGTH = 10;
+        if (KERNEL_LENGTH % 2 == 0) KERNEL_LENGTH++;
+        Mat img = imread("B:\\lena.jpg", CV_LOAD_IMAGE_COLOR);
+
+        // 檢查讀檔是否成功
+        if (!img.data) {
+            return;
+        }
+
+        int per = 10;
+        int i = img.cols * img.rows;
+
+        for (int k = 0; k < i * per / 100; k++) {
+
+            int i = rand() % img.cols;
+            int j = rand() % img.rows;
+            if (img.channels() == 3) {
+                img.at<Vec3b>(j, i)[0] = 255;
+                img.at<Vec3b>(j, i)[1] = 255;
+                img.at<Vec3b>(j, i)[2] = 255;
+            }
+        }
+
+        dst = img.clone();
+
+        ///使用 Median 模糊法
+        medianBlur(img, dst, KERNEL_LENGTH);
+        imshow("Median平滑模糊法", dst);
+
+        imshow("10%", img);
         waitKey(0);
 
     }

@@ -45,6 +45,7 @@ CMakeFiles\OpenCV.dir\main.cpp.obj: C:\opencv\build\include\opencv2\dnn\dnn.hpp
 CMakeFiles\OpenCV.dir\main.cpp.obj: C:\opencv\build\include\opencv2\dnn\dnn.inl.hpp
 CMakeFiles\OpenCV.dir\main.cpp.obj: C:\opencv\build\include\opencv2\dnn\layer.hpp
 CMakeFiles\OpenCV.dir\main.cpp.obj: C:\opencv\build\include\opencv2\features2d.hpp
+CMakeFiles\OpenCV.dir\main.cpp.obj: C:\opencv\build\include\opencv2\features2d\features2d.hpp
 CMakeFiles\OpenCV.dir\main.cpp.obj: C:\opencv\build\include\opencv2\flann.hpp
 CMakeFiles\OpenCV.dir\main.cpp.obj: C:\opencv\build\include\opencv2\flann\all_indices.h
 CMakeFiles\OpenCV.dir\main.cpp.obj: C:\opencv\build\include\opencv2\flann\allocator.h
