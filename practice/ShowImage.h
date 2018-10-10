@@ -423,7 +423,6 @@ public:
         Scalar white = Scalar(255, 255, 255);
 
         double inRadius;
-        double moonBroad;
         double outRadius;
 
         /*
@@ -693,9 +692,7 @@ public:
 
         imshow("10%", img);
         waitKey(0);
-
     }
-
 
 private:
     void Ellipse(Mat img, double theta) {//橢圓
@@ -770,7 +767,7 @@ private:
 
     }
 
-    void drawHistImg(const Mat &src, Mat &dst) {
+    void drawHistImg(const Mat &src, Mat &dst) { //畫直方圖
         int histSize = 256;
         float histMaxValue = 0;
         for (int i = 0; i < histSize; i++) {
@@ -786,7 +783,6 @@ private:
             line(dst, Point(i, 255), Point(i, 255 - intensity), Scalar(0));
         }
     }
-
 };
 
 #endif //OPENCV_SHOWIMAGE_H
