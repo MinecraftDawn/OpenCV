@@ -694,6 +694,24 @@ public:
         waitKey(0);
     }
 
+    void showImg_12(){
+        Mat img = imread("B:\\opencv-logo.png");
+        Mat dst;
+
+        int dilation_size = 20;
+        Mat element = getStructuringElement(MORPH_CROSS,
+                                            Size(2 * dilation_size + 1, 2 * dilation_size+ 1),
+                                            Point(dilation_size, dilation_size));
+        erode(img,dst,element);
+
+        Point textOrg(10, 25);
+        putText(dst, "", textOrg, FONT_HERSHEY_SIMPLEX, 1, 3);
+
+        imshow("¿±µÈ", dst);
+
+        waitKey(0);
+    }
+
 private:
     void Ellipse(Mat img, double theta) {//¾ò¶ê
         int thickness = 0;
