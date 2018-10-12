@@ -659,7 +659,7 @@ public:
 
     }
 
-    void showImg_11() {
+    void showImg_11() {//¼Ò½k¥­·Æ
         Mat dst;
         int KERNEL_LENGTH = 10;
         if (KERNEL_LENGTH % 2 == 0) KERNEL_LENGTH++;
@@ -694,7 +694,7 @@ public:
         waitKey(0);
     }
 
-    void showImg_12(){
+    void showImg_12(){//¿±µÈ
         Mat img = imread("B:\\opencv-logo.png");
         Mat dst;
 
