@@ -694,15 +694,15 @@ public:
         waitKey(0);
     }
 
-    void showImg_12(){//膨脹
+    void showImg_12() {//膨脹
         Mat img = imread("B:\\opencv-logo.png");
         Mat dst;
 
         int dilation_size = 20;
         Mat element = getStructuringElement(MORPH_CROSS,
-                                            Size(2 * dilation_size + 1, 2 * dilation_size+ 1),
+                                            Size(2 * dilation_size + 1, 2 * dilation_size + 1),
                                             Point(dilation_size, dilation_size));
-        erode(img,dst,element);
+        erode(img, dst, element);
 
         Point textOrg(10, 25);
         putText(dst, "", textOrg, FONT_HERSHEY_SIMPLEX, 1, 3);
@@ -710,6 +710,63 @@ public:
         imshow("膨脹", dst);
 
         waitKey(0);
+    }
+
+    void showImg_13() {
+        Mat src, dst, tmp;
+
+        src = imread("B:\\血小板.jpg");
+
+        if (!src.data) {
+            cout << "無法讀取圖檔！" << endl;
+            return;
+        }
+
+        cout << "按[u] 放大" << endl;
+        cout << "按[d] 縮小" << endl;
+        cout << "按[ESC] 結束程式" << endl;
+
+        tmp = dst = src;
+
+        namedWindow("縮放", WINDOW_AUTOSIZE);
+        imshow("縮放", dst);
+
+        char c = 0;
+        while (true) {
+            c = waitKey(0);
+
+            if (c == 27) {
+                break;
+            } else if (c == 'u') {
+                if (tmp.cols < src.cols) {
+                    int multiple = (src.cols / tmp.cols);
+                    tmp = src;
+
+                    if(multiple == 2){
+                        dst = src;
+                    }
+
+                    while(multiple / 2 != 1){
+                        multiple /= 2;
+                        pyrDown(tmp, dst, Size(tmp.cols / 2, tmp.rows / 2));
+                        tmp = dst;
+                    }
+
+
+                } else {
+                    pyrUp(tmp, dst, Size(tmp.cols * 2, tmp.rows * 2));
+                }
+                cout << "放大" << endl;
+            } else if (c == 'd') {
+                pyrDown(tmp, dst, Size(tmp.cols / 2, tmp.rows / 2));
+                cout << "縮小" << endl;
+            }
+
+            imshow("縮放", dst);
+            tmp = dst;
+        }
+
+
     }
 
 private:
