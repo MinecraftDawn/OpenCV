@@ -16,13 +16,7 @@
   <component name="ChangeListManager">
     <list default="true" id="696f3d8e-a7be-4a90-9077-a4a9d5cae36e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/vc140.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/ShowImage.h" beforeDir="false" afterPath="$PROJECT_DIR$/practice/ShowImage.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,23 +32,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1120">
-              <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="20" />
-              <folding>
-                <element signature="e#2#21#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="280">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShowImage.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShowImage.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="746" column="21" lean-forward="true" selection-start-line="746" selection-start-column="21" selection-end-line="746" selection-end-column="21" />
+            <state relative-caret-position="566">
+              <caret line="751" column="34" selection-start-line="751" selection-start-column="34" selection-end-line="751" selection-end-column="34" />
               <folding>
                 <element signature="e#95#127#0" expanded="true" />
               </folding>
@@ -97,8 +88,8 @@
         <option value="$PROJECT_DIR$/practice/ShowImg.cpp" />
         <option value="$PROJECT_DIR$/practice/ShowImage.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/practice/ShowImage.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -222,7 +213,8 @@
       <workItem from="1539174988536" duration="2299000" />
       <workItem from="1539269499457" duration="306000" />
       <workItem from="1539355312877" duration="883000" />
-      <workItem from="1539441894001" duration="4966000" />
+      <workItem from="1539441894001" duration="5668000" />
+      <workItem from="1539510956114" duration="407000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1536679366015</created>
@@ -518,23 +510,28 @@
       <option name="project" value="LOCAL" />
       <updated>1539355381328</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="縮放">
+      <created>1539447889017</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1539447889017</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162411000" />
+    <option name="totallyTimeSpent" value="163520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1088" y="-508" width="1096" height="1896" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" content_ui="combo" id="Project" order="11" weight="0.2275281" />
+      <window_info active="true" anchor="bottom" content_ui="combo" id="Project" order="11" visible="true" weight="0.2275281" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.30955055" />
       <window_info anchor="bottom" id="CMake" order="0" weight="0.32921347" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32977527" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.1741573" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.1741573" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.14550562" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -546,6 +543,7 @@
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.30955055" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +553,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="簡單註解" />
     <MESSAGE value="畫圖-橢圓" />
     <MESSAGE value="灰階" />
     <MESSAGE value="圓 O" />
@@ -580,7 +577,8 @@
     <MESSAGE value="comment" />
     <MESSAGE value="膨脹" />
     <MESSAGE value="just comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="just comment" />
+    <MESSAGE value="縮放" />
+    <option name="LAST_COMMIT_MESSAGE" value="縮放" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -931,23 +929,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="73" selection-end-column="20" />
+        <state relative-caret-position="566">
+          <caret line="751" column="34" selection-start-line="751" selection-start-column="34" selection-end-line="751" selection-end-column="34" />
           <folding>
-            <element signature="e#2#21#0" expanded="true" />
+            <element signature="e#95#127#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="746" column="21" lean-forward="true" selection-start-line="746" selection-start-column="21" selection-end-line="746" selection-end-column="21" />
-          <folding>
-            <element signature="e#95#127#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="280">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
