@@ -19,6 +19,13 @@
 using namespace cv;
 using namespace std;
 
+struct userdata {
+    Mat src;
+    int trackbarValue;
+    int trackbarType;
+
+};
+
 class ShowImage {
 public:
 
@@ -742,11 +749,11 @@ public:
                     int multiple = (src.cols / tmp.cols);
                     tmp = src;
 
-                    if(multiple == 2){
+                    if (multiple == 2) {
                         dst = src;
                     }
 
-                    while(multiple / 2 != 1){
+                    while (multiple / 2 != 1) {
                         multiple /= 2;
                         pyrDown(tmp, dst, Size(tmp.cols / 2, tmp.rows / 2));
                         tmp = dst;
@@ -765,11 +772,30 @@ public:
             imshow("ÁY©ñ", dst);
             tmp = dst;
         }
-
-
     }
 
+    void showImg_14() {
+        Mat src;
+        src = imread("B:\\chicky_512.png", 1);
+        int trackbarValue = 0;
+        int trackbarType = 3;
+        int maxType = 4;
+
+        namedWindow("Á{¬É­È", WINDOW_AUTOSIZE);
+
+        imshow("Á{¬É­È", src);
+
+        Mat dst;
+        threshold(src, dst, 100,
+                  255, trackbarType);
+
+        imshow("Á{¬É­È", dst);
+
+        waitKey(0);
+
+    }
 private:
+
     void Ellipse(Mat img, double theta) {//¾ò¶ê
         int thickness = 0;
 
