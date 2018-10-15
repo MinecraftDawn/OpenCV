@@ -792,7 +792,55 @@ public:
         imshow("臨界值", dst);
 
         waitKey(0);
+    }
 
+    void showImg_15(){
+        Mat src, dst;
+        int broad;
+        int borderType;
+
+        RNG rng(12345);
+
+        src = imread("B:\\lena.jpg");
+
+        if (!src.data)
+            return ;
+
+        cout << "按 'c' 隨機設定邊框" << endl;
+        cout << "按 'r' 取消邊框" << endl;
+        cout << "按 'ESC' 結束程式" << endl;
+
+        namedWindow("複製邊界", WINDOW_AUTOSIZE);
+
+
+        broad = 0.1*src.rows;
+
+        dst = src;
+
+        imshow("複製邊界", dst);
+
+        while(true)
+        {
+            int c = waitKey(0);
+
+            if ((char)c == 27) {
+                break;
+            } else if ((char)c == 'c') {
+                // 補固定值
+                borderType = BORDER_CONSTANT;
+            } else if ((char)c == 'r') {
+                // 原圖值加框
+                borderType = BORDER_REPLICATE;
+            }
+
+            Scalar value(rng.uniform(0, 255), rng.uniform(0, 255),
+                         rng.uniform(0, 255));
+
+            copyMakeBorder(src, dst, broad, broad, broad, broad,
+                           borderType, value);
+
+            imshow("複製邊界", dst);
+        }
     }
 private:
 
