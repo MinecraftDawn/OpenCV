@@ -16,6 +16,11 @@
   <component name="ChangeListManager">
     <list default="true" id="696f3d8e-a7be-4a90-9077-a4a9d5cae36e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/ShowImage.h" beforeDir="false" afterPath="$PROJECT_DIR$/practice/ShowImage.h" afterDir="false" />
     </list>
@@ -36,8 +41,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="252">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
               </folding>
@@ -48,8 +53,8 @@
       <file leaf-file-name="ShowImage.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="958">
-              <caret line="837" column="42" lean-forward="true" selection-start-line="837" selection-start-column="42" selection-end-line="837" selection-end-column="42" />
+            <state relative-caret-position="877">
+              <caret line="866" column="23" selection-start-line="866" selection-start-column="23" selection-end-line="866" selection-end-column="23" />
               <folding>
                 <element signature="e#95#127#0" expanded="true" />
               </folding>
@@ -122,6 +127,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,10 +144,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Eric/CLionProjects/OpenCV/main.cpp" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -223,7 +229,8 @@
       <workItem from="1539355312877" duration="883000" />
       <workItem from="1539441894001" duration="5668000" />
       <workItem from="1539510956114" duration="5277000" />
-      <workItem from="1539613714494" duration="1766000" />
+      <workItem from="1539613714494" duration="2502000" />
+      <workItem from="1539670057520" duration="2471000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1536679366015</created>
@@ -540,11 +547,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539518169486</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="加框">
+      <created>1539617653250</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1539617653250</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170156000" />
+    <option name="totallyTimeSpent" value="173363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1088" y="-508" width="1096" height="1896" extended-state="6" />
@@ -577,7 +591,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="灰階" />
     <MESSAGE value="圓 O" />
     <MESSAGE value="Line" />
     <MESSAGE value="魔法陣(外圓+內正方)" />
@@ -602,7 +615,8 @@
     <MESSAGE value="just comment" />
     <MESSAGE value="縮放" />
     <MESSAGE value="臨界值" />
-    <option name="LAST_COMMIT_MESSAGE" value="臨界值" />
+    <MESSAGE value="加框" />
+    <option name="LAST_COMMIT_MESSAGE" value="加框" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -955,8 +969,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="252">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
           </folding>
@@ -965,8 +979,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="958">
-          <caret line="837" column="42" lean-forward="true" selection-start-line="837" selection-start-column="42" selection-end-line="837" selection-end-column="42" />
+        <state relative-caret-position="877">
+          <caret line="866" column="23" selection-start-line="866" selection-start-column="23" selection-end-line="866" selection-end-column="23" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
           </folding>

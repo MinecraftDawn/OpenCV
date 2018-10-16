@@ -794,7 +794,7 @@ public:
         waitKey(0);
     }
 
-    void showImg_15(){
+    void showImg_15() {
         Mat src, dst;
         int broad;
         int borderType;
@@ -804,7 +804,7 @@ public:
         src = imread("B:\\lena.jpg");
 
         if (!src.data)
-            return ;
+            return;
 
         cout << "按 'c' 隨機設定邊框" << endl;
         cout << "按 'r' 取消邊框" << endl;
@@ -813,22 +813,21 @@ public:
         namedWindow("複製邊界", WINDOW_AUTOSIZE);
 
 
-        broad = 0.1*src.rows;
+        broad = 0.1 * src.rows;
 
         dst = src;
 
         imshow("複製邊界", dst);
 
-        while(true)
-        {
+        while (true) {
             int c = waitKey(0);
 
-            if ((char)c == 27) {
+            if ((char) c == 27) {
                 break;
-            } else if ((char)c == 'c') {
+            } else if ((char) c == 'c') {
                 // 補固定值
                 borderType = BORDER_CONSTANT;
-            } else if ((char)c == 'r') {
+            } else if ((char) c == 'r') {
                 // 原圖值加框
                 borderType = BORDER_REPLICATE;
             }
@@ -842,6 +841,34 @@ public:
             imshow("複製邊界", dst);
         }
     }
+
+    void showImg_16() {
+        Mat src, gray, sobelX, sobelY, absX, absY, final;
+        int ksize = 3, dx = 1, dy = 1;
+        double scale = 5;
+
+        src = imread("B:\\血小板.jpg", CV_LOAD_IMAGE_COLOR);
+
+        if (!src.data) return;
+
+        GaussianBlur(src, src, Size(3, 3), 0, 0);
+
+        cvtColor(src, gray, COLOR_RGB2GRAY);
+
+        //對X微分找邊緣
+        Sobel(gray, sobelX, CV_16U, dx, 0, ksize, scale);
+
+        convertScaleAbs(sobelX, absX);
+
+        Sobel(gray, sobelY, CV_16U, 0, dy, ksize, scale);
+        convertScaleAbs(sobelY, absY);
+
+
+        addWeighted(absX, 0.5, absY, 0.5, 0, final);
+        imshow("", final);
+        waitKey(0);
+    }
+
 private:
 
     void Ellipse(Mat img, double theta) {//橢圓
