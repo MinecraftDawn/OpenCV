@@ -21,7 +21,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/ShowImage.h" beforeDir="false" afterPath="$PROJECT_DIR$/practice/ShowImage.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -53,8 +52,8 @@
       <file leaf-file-name="ShowImage.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="877">
-              <caret line="866" column="23" selection-start-line="866" selection-start-column="23" selection-end-line="866" selection-end-column="23" />
+            <state relative-caret-position="393">
+              <caret line="881" column="34" selection-start-line="881" selection-start-column="34" selection-end-line="881" selection-end-column="34" />
               <folding>
                 <element signature="e#95#127#0" expanded="true" />
               </folding>
@@ -230,7 +229,7 @@
       <workItem from="1539441894001" duration="5668000" />
       <workItem from="1539510956114" duration="5277000" />
       <workItem from="1539613714494" duration="2502000" />
-      <workItem from="1539670057520" duration="2471000" />
+      <workItem from="1539670057520" duration="3903000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1536679366015</created>
@@ -554,11 +553,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539617653250</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="找邊緣">
+      <created>1539672927480</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1539672927480</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173363000" />
+    <option name="totallyTimeSpent" value="174795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1088" y="-508" width="1096" height="1896" extended-state="6" />
@@ -591,7 +597,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="圓 O" />
     <MESSAGE value="Line" />
     <MESSAGE value="魔法陣(外圓+內正方)" />
     <MESSAGE value="魔法陣(外圓+內正方+一半月亮)" />
@@ -616,7 +621,8 @@
     <MESSAGE value="縮放" />
     <MESSAGE value="臨界值" />
     <MESSAGE value="加框" />
-    <option name="LAST_COMMIT_MESSAGE" value="加框" />
+    <MESSAGE value="找邊緣" />
+    <option name="LAST_COMMIT_MESSAGE" value="找邊緣" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -979,8 +985,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="877">
-          <caret line="866" column="23" selection-start-line="866" selection-start-column="23" selection-end-line="866" selection-end-column="23" />
+        <state relative-caret-position="393">
+          <caret line="881" column="34" selection-start-line="881" selection-start-column="34" selection-end-line="881" selection-end-column="34" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
           </folding>

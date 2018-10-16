@@ -843,7 +843,10 @@ public:
     }
 
     void showImg_16() {
-        Mat src, gray, sobelX, sobelY, absX, absY, final;
+        Mat src, gray;
+        Mat sobelX, sobelY, absX1, absY1, sobelFinal;
+        Mat cannyX, cannyY, absX2, absY2, cannyFinal;
+
         int ksize = 3, dx = 1, dy = 1;
         double scale = 5;
 
@@ -857,15 +860,27 @@ public:
 
         //πÔX∑L§¿ß‰√‰Ωt
         Sobel(gray, sobelX, CV_16U, dx, 0, ksize, scale);
-
-        convertScaleAbs(sobelX, absX);
+        convertScaleAbs(sobelX, absX1);
 
         Sobel(gray, sobelY, CV_16U, 0, dy, ksize, scale);
-        convertScaleAbs(sobelY, absY);
+        convertScaleAbs(sobelY, absY1);
+
+        addWeighted(absX1, 0.5, absY1, 0.5, 0, sobelFinal);
+
+        imshow("sobel", sobelFinal);
 
 
-        addWeighted(absX, 0.5, absY, 0.5, 0, final);
-        imshow("", final);
+
+        Canny(gray, cannyX, 50, 200, 3);
+        convertScaleAbs(cannyX, absX2);
+
+        Canny(gray, cannyY, 50, 200, 3);
+        convertScaleAbs(cannyY, absY2);
+
+        addWeighted(absX2, 0.5, absY2, 0.5, 0, cannyFinal);
+
+        imshow("canny", cannyFinal);
+
         waitKey(0);
     }
 
