@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/.idea/workspace.xml" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/practice/ShowImage.h" line="899" mnemonic="2" />
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
@@ -21,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/ShowImage.h" beforeDir="false" afterPath="$PROJECT_DIR$/practice/ShowImage.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -40,8 +41,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="280">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
               </folding>
@@ -52,8 +53,8 @@
       <file leaf-file-name="ShowImage.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="881" column="34" selection-start-line="881" selection-start-column="34" selection-end-line="881" selection-end-column="34" />
+            <state relative-caret-position="404">
+              <caret line="894" column="44" selection-start-line="894" selection-start-column="44" selection-end-line="894" selection-end-column="44" />
               <folding>
                 <element signature="e#95#127#0" expanded="true" />
               </folding>
@@ -115,10 +116,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1088" />
-    <option name="y" value="-508" />
-    <option name="width" value="1096" />
-    <option name="height" value="1896" />
+    <option name="x" value="281" />
+    <option name="y" value="-8" />
+    <option name="width" value="1089" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -229,7 +230,12 @@
       <workItem from="1539441894001" duration="5668000" />
       <workItem from="1539510956114" duration="5277000" />
       <workItem from="1539613714494" duration="2502000" />
-      <workItem from="1539670057520" duration="3903000" />
+      <workItem from="1539670057520" duration="5462000" />
+      <workItem from="1540223319369" duration="331000" />
+      <workItem from="1540225348984" duration="607000" />
+      <workItem from="1540302407048" duration="632000" />
+      <workItem from="1540361650670" duration="68000" />
+      <workItem from="1540383232102" duration="3302000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1536679366015</created>
@@ -560,23 +566,30 @@
       <option name="project" value="LOCAL" />
       <updated>1539672927480</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="找邊緣canny">
+      <created>1539677899104</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1539677899104</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174795000" />
+    <option name="totallyTimeSpent" value="181294000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1088" y="-508" width="1096" height="1896" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" content_ui="combo" id="Project" order="11" weight="0.2275281" />
+      <window_info anchor="bottom" content_ui="combo" id="Project" order="11" weight="0.24787234" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.30955055" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.30851063" />
       <window_info anchor="bottom" id="CMake" order="0" weight="0.32921347" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32977527" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.1741573" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.17340426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.14550562" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -597,7 +610,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Line" />
     <MESSAGE value="魔法陣(外圓+內正方)" />
     <MESSAGE value="魔法陣(外圓+內正方+一半月亮)" />
     <MESSAGE value="魔法陣(外圓+內正方+內外月亮)" />
@@ -622,7 +634,8 @@
     <MESSAGE value="臨界值" />
     <MESSAGE value="加框" />
     <MESSAGE value="找邊緣" />
-    <option name="LAST_COMMIT_MESSAGE" value="找邊緣" />
+    <MESSAGE value="找邊緣canny" />
+    <option name="LAST_COMMIT_MESSAGE" value="找邊緣canny" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -975,8 +988,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="280">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
           </folding>
@@ -985,8 +998,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="881" column="34" selection-start-line="881" selection-start-column="34" selection-end-line="881" selection-end-column="34" />
+        <state relative-caret-position="404">
+          <caret line="894" column="44" selection-start-line="894" selection-start-column="44" selection-end-line="894" selection-end-column="44" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
           </folding>

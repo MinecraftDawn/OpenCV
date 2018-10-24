@@ -870,7 +870,6 @@ public:
         imshow("sobel", sobelFinal);
 
 
-
         Canny(gray, cannyX, 50, 200, 3);
         convertScaleAbs(cannyX, absX2);
 
@@ -881,6 +880,26 @@ public:
 
         imshow("canny", cannyFinal);
 
+        waitKey(0);
+    }
+
+    void showImg_17() { //Close
+        int size = 1;
+        Mat dst;
+        Mat src = imread("B:\\原圖.png", CV_LOAD_IMAGE_COLOR);
+
+        Mat element = getStructuringElement(1, Size(2 * size + 1, 2 * size + 1),
+                                            Point(size, size));
+
+        dilate(src, dst, element,Point(1,1),2);
+        erode(dst, dst, element,Point(1,1),1);
+
+        dilate(dst, dst, element,Point(1,1),1);
+        erode(dst, dst, element,Point(1,1),2);
+
+
+        imshow("還沒Close",src);
+        imshow("Close",dst);
         waitKey(0);
     }
 
