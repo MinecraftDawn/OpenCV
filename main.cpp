@@ -7,6 +7,6 @@ using namespace std;
 
 int main(void) {
     ShowImage *s = new ShowImage();
-    s->showImg_17();
+    s->showImg_18();
     return 0;
 }

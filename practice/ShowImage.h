@@ -883,7 +883,7 @@ public:
         waitKey(0);
     }
 
-    void showImg_17() { //Close
+    void showImg_17() { //Close Open
         int size = 1;
         Mat dst;
         Mat src = imread("B:\\原圖.png", CV_LOAD_IMAGE_COLOR);
@@ -891,15 +891,30 @@ public:
         Mat element = getStructuringElement(1, Size(2 * size + 1, 2 * size + 1),
                                             Point(size, size));
 
-        dilate(src, dst, element,Point(1,1),2);
-        erode(dst, dst, element,Point(1,1),1);
+        dilate(src, dst, element, Point(1, 1), 2);
+        erode(dst, dst, element, Point(1, 1), 1);
 
-        dilate(dst, dst, element,Point(1,1),1);
-        erode(dst, dst, element,Point(1,1),2);
+        dilate(dst, dst, element, Point(1, 1), 1);
+        erode(dst, dst, element, Point(1, 1), 2);
 
 
-        imshow("還沒Close",src);
-        imshow("Close",dst);
+        imshow("還沒Close", src);
+        imshow("Close", dst);
+        waitKey(0);
+    }
+
+    void showImg_18() {
+        Mat src, dst;
+        src = imread("B:\\血小板.jpg", CV_LOAD_IMAGE_COLOR);
+
+        if(!src.data)
+            return;
+
+        cvtColor(src, src, COLOR_RGB2GRAY);
+        equalizeHist(src, dst);
+
+        imshow("等化", dst);
+
         waitKey(0);
     }
 
