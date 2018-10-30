@@ -16,6 +16,12 @@
   <component name="ChangeListManager">
     <list default="true" id="696f3d8e-a7be-4a90-9077-a4a9d5cae36e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OpenCV.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenCV.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/ShowImage.h" beforeDir="false" afterPath="$PROJECT_DIR$/practice/ShowImage.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -35,8 +41,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="308">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="e#1#20#0" expanded="true" />
               </folding>
@@ -47,8 +53,8 @@
       <file leaf-file-name="ShowImage.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1160">
-              <caret line="906" column="8" selection-start-line="906" selection-start-column="8" selection-end-line="906" selection-end-column="8" />
+            <state relative-caret-position="1065">
+              <caret line="980" lean-forward="true" selection-start-line="980" selection-end-line="980" />
               <folding>
                 <element signature="e#95#127#0" expanded="true" />
               </folding>
@@ -78,6 +84,7 @@
       <find>threshold_type</find>
       <find>threshold_value</find>
       <find>threshold</find>
+      <find>邊緣</find>
     </findStrings>
     <replaceStrings>
       <replace>\\</replace>
@@ -110,8 +117,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1088" />
-    <option name="y" value="-508" />
+    <option name="x" value="-1251" />
+    <option name="y" value="-527" />
     <option name="width" value="1089" />
     <option name="height" value="1056" />
   </component>
@@ -121,7 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,6 +144,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,14 +237,10 @@
       <workItem from="1540302407048" duration="632000" />
       <workItem from="1540361650670" duration="68000" />
       <workItem from="1540383232102" duration="3518000" />
-      <workItem from="1540471633352" duration="1030000" />
-    </task>
-    <task id="LOCAL-00001" summary="init">
-      <created>1536679366015</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1536679366015</updated>
+      <workItem from="1540471633352" duration="1297000" />
+      <workItem from="1540648960438" duration="153000" />
+      <workItem from="1540876912607" duration="611000" />
+      <workItem from="1540898333074" duration="2076000" />
     </task>
     <task id="LOCAL-00002" summary="test class of C++">
       <created>1536751733653</created>
@@ -575,23 +578,29 @@
       <option name="project" value="LOCAL" />
       <updated>1540388766016</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="轉灰階-&gt;等化器">
+      <created>1540472885014</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1540472885015</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182540000" />
+    <option name="totallyTimeSpent" value="185647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1088" y="-508" width="1096" height="1896" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" content_ui="combo" id="Project" order="11" weight="0.13089888" />
+      <window_info active="true" anchor="bottom" content_ui="combo" id="Project" order="11" visible="true" weight="0.13089888" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.30842698" />
       <window_info anchor="bottom" id="CMake" order="0" weight="0.32921347" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32977527" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.17303371" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.17303371" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.14550562" />
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -612,7 +621,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="魔法陣(外圓+內正方+一半月亮)" />
     <MESSAGE value="魔法陣(外圓+內正方+內外月亮)" />
     <MESSAGE value="Just comment" />
     <MESSAGE value="圓外連接" />
@@ -637,7 +645,8 @@
     <MESSAGE value="找邊緣" />
     <MESSAGE value="找邊緣canny" />
     <MESSAGE value="Open&amp;Close" />
-    <option name="LAST_COMMIT_MESSAGE" value="Open&amp;Close" />
+    <MESSAGE value="轉灰階-&gt;等化器" />
+    <option name="LAST_COMMIT_MESSAGE" value="轉灰階-&gt;等化器" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -990,8 +999,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="308">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="e#1#20#0" expanded="true" />
           </folding>
@@ -1000,8 +1009,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/practice/ShowImage.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1160">
-          <caret line="906" column="8" selection-start-line="906" selection-start-column="8" selection-end-line="906" selection-end-column="8" />
+        <state relative-caret-position="1065">
+          <caret line="980" lean-forward="true" selection-start-line="980" selection-end-line="980" />
           <folding>
             <element signature="e#95#127#0" expanded="true" />
           </folding>

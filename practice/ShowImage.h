@@ -918,6 +918,82 @@ public:
         waitKey(0);
     }
 
+    void showImg_19(){
+//    Mat src = imread("B:\\lena.jpg");
+//    if(!src.data) return;
+//
+//    Mat dst = src.clone();
+//
+//    cout << "請選擇模糊法" << endl;
+//    cout << "0為Median，1為Gaussian" << endl;
+//
+//    int choice;
+//    cin >> choice;
+//
+//    if(choice){
+//        medianBlur(src, dst, 3);
+//    } else{
+//        GaussianBlur(src, dst, Size(3, 3), 0, 0);
+//    }
+//
+//    imshow("",dst);
+//    waitKey(0);
+
+        Mat src, gray;
+        Mat sobelX, sobelY, absX1, absY1, sobelFinal;
+        Mat cannyX, cannyY, absX2, absY2, cannyFinal;
+        int choice;
+
+        int ksize = 3, dx = 1, dy = 1;
+        double scale = 5;
+
+        src = imread("B:\\lena.jpg", CV_LOAD_IMAGE_COLOR);
+
+        if (!src.data) return;
+
+        cout << "請選擇模糊法" << endl;
+        cout << "0為Median，1為Gaussian" << endl;
+
+        cin >> choice;
+        cout << "請選擇邊緣方式" << endl;
+        cout << "0為Sobel，1為canny" << endl;
+
+        cin >> choice;
+        if (choice) {
+            medianBlur(src, src, 5);
+        } else {
+            GaussianBlur(src, src, Size(5, 5), 0, 0);
+        }
+
+        cvtColor(src, gray, COLOR_RGB2GRAY);
+
+        //對X微分找邊緣
+        Sobel(gray, sobelX, CV_16U, dx, 0, ksize, scale);
+        convertScaleAbs(sobelX, absX1);
+
+        //對Y微分找邊緣
+        Sobel(gray, sobelY, CV_16U, 0, dy, ksize, scale);
+        convertScaleAbs(sobelY, absY1);
+
+        addWeighted(absX1, 0.5, absY1, 0.5, 0, sobelFinal);
+
+        imshow("Median-sobel", sobelFinal);
+
+
+        Canny(gray, cannyX, 50, 200, 3);
+        convertScaleAbs(cannyX, absX2);
+
+        Canny(gray, cannyY, 50, 200, 3);
+        convertScaleAbs(cannyY, absY2);
+
+        addWeighted(absX2, 0.5, absY2, 0.5, 0, cannyFinal);
+
+        imshow("Median-canny", cannyFinal);
+
+        waitKey(0);
+
+    }
+
 private:
 
     void Ellipse(Mat img, double theta) {//橢圓
